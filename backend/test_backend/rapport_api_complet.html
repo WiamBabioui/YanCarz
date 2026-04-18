@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>YanCarz - Rapport d'Audit API Global (V2)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { background-color: #0f172a; font-family: 'Inter', sans-serif; }
+        .stat-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(51, 65, 85, 0.5); }
+        .critical-border { border-left: 6px solid #f43f5e; }
+        .success-border { border-left: 6px solid #10b981; }
+    </style>
+</head>
+<body class="text-slate-300 p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-slate-800 pb-8 gap-4">
+            <div>
+                <h1 class="text-4xl font-black text-white tracking-tight">Rapport d'Audit <span class="text-rose-500">Backend API</span></h1>
+                <p class="text-slate-500 mt-2 flex items-center gap-2 italic">
+                    <i class="fas fa-file-code text-indigo-400"></i> 
+                    Analyse basée sur les exports Postman du 12/03/2026
+                </p>
+            </div>
+            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest text-center">Responsable QA</p>
+                <p class="text-lg font-bold text-white uppercase">Wiam BABIOUI</p>
+            </div>
+        </div>
+
+        <!-- Global Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="stat-card p-6 rounded-3xl text-center">
+                <p class="text-slate-500 text-xs font-bold uppercase mb-2">Total Assertions</p>
+                <p class="text-5xl font-black text-white">180+</p>
+            </div>
+            <div class="stat-card p-6 rounded-3xl text-center">
+                <p class="text-slate-500 text-xs font-bold uppercase mb-2">Tests Réussis</p>
+                <p class="text-5xl font-black text-emerald-500">78</p>
+            </div>
+            <div class="stat-card p-6 rounded-3xl text-center shadow-[0_0_30px_rgba(244,63,94,0.1)] border-rose-500/30">
+                <p class="text-slate-500 text-xs font-bold uppercase mb-2">Tests Échoués</p>
+                <p class="text-5xl font-black text-rose-500">113</p>
+            </div>
+        </div>
+
+        <h2 class="text-xl font-bold text-slate-400 uppercase tracking-widest mb-8 italic"><i class="fas fa-exclamation-triangle mr-3 text-rose-500"></i>Anomalies Critiques Détectées</h2>
+
+        <div class="space-y-6">
+            <!-- BUG 1 : ERREUR 500 -->
+            <div class="bg-rose-500/5 border border-rose-500/30 p-8 rounded-3xl critical-border">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="bg-rose-500 text-white text-[10px] font-black px-2 py-1 rounded">BLOQUANT</span>
+                        <h3 class="text-2xl font-bold text-white mt-3 uppercase tracking-tighter">Instabilité du Serveur (HTTP 500)</h3>
+                        <p class="text-slate-400 mt-4 leading-relaxed">
+                            Le serveur .NET crash systématiquement sur les endpoints <strong>POST, PUT et DELETE</strong> des modules <strong>Agency</strong> et <strong>Portal</strong>. 
+                            <br>Ce défaut empêche toute création de véhicule ou de réservation.
+                        </p>
+                    </div>
+                    <i class="fas fa-bomb text-rose-500 text-5xl opacity-40"></i>
+                </div>
+            </div>
+
+            <!-- BUG 2 : ERREUR 404 -->
+            <div class="bg-amber-500/5 border border-amber-500/30 p-8 rounded-3xl" style="border-left: 6px solid #f59e0b;">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="bg-amber-500 text-black text-[10px] font-black px-2 py-1 rounded">MAJEUR</span>
+                        <h3 class="text-2xl font-bold text-white mt-3 uppercase tracking-tighter">Défaut d'ID (HTTP 404)</h3>
+                        <p class="text-slate-400 mt-4 leading-relaxed">
+                            Les requêtes de type <code>GET /api/.../{id}</code> renvoient une erreur 404, même pour des IDs existants. La logique de récupération individuelle est rompue.
+                        </p>
+                    </div>
+                    <i class="fas fa-search-minus text-amber-500 text-5xl opacity-40"></i>
+                </div>
+            </div>
+
+            <!-- PERFORMANCE -->
+            <div class="stat-card p-8 rounded-3xl border-l-4 border-indigo-500">
+                <div class="flex justify-between items-center text-indigo-400">
+                    <h3 class="font-bold uppercase tracking-widest text-sm">Performance Cloud Azure</h3>
+                    <i class="fas fa-clock"></i>
+                </div>
+                <p class="text-slate-300 mt-4">
+                    Certains appels (GET /Agency) affichent une latence de <strong>2769ms</strong>. La performance est dégradée de 300% par rapport au seuil cible (800ms).
+                </p>
+            </div>
+        </div>
+
+        <!-- Section Conclusion -->
+        <div class="mt-16 p-10 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-[3rem] shadow-2xl shadow-indigo-500/20 text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-2xl font-black text-white uppercase tracking-widest mb-4 italic">Verdict de l'Audit</h2>
+                <p class="text-indigo-100 max-w-3xl mx-auto leading-relaxed">
+                    "Le Backend est actuellement dans un état <strong>instable</strong>. Si la lecture des référentiels (Shared API) est fonctionnelle, la couche de persistance (écriture en base) est totalement inopérante. Une revue immédiate du code .NET (Exception Handling) est requise avant tout déploiement."
+                </p>
+                <div class="mt-8 flex justify-center items-center gap-3">
+                    <div class="w-10 h-px bg-white/30"></div>
+                    <span class="font-bold text-white">Rapport Officiel QA - YanCarz Agency</span>
+                    <div class="w-10 h-px bg-white/30"></div>
+                </div>
+            </div>
+            <i class="fas fa-shield-virus absolute -right-10 -bottom-10 text-9xl text-white/5"></i>
+        </div>
+    </div>
+
+    <footer class="py-12 text-center text-slate-700 text-[10px] font-black uppercase tracking-[0.5em] mt-12">
+        YanCarz Quality Assurance Team &copy; 2026
+    </footer>
+</body>
+</html>

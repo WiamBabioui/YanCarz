@@ -1,0 +1,20 @@
+$kind: collection
+name: Portal API
+variables:
+  baseUrl: /
+  "": ""
+scripts:
+  - type: http:afterResponse
+    code: "pm.test(\"Status Success (200/201/204)\", function () {\r
+
+      \    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Performance : Moins de 1000ms\", function () {\r
+
+      \    pm.expect(pm.response.responseTime).to.be.below(1000);\r
+
+      });"

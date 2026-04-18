@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/portal/Agency"
+  method: GET
+  headers:
+    Accept: text/plain
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "276afacf-d8a8-3ffd-f01c-198f14935e5a",
+          "name": "string"
+        },
+        {
+          "id": "24c407b8-e016-eb13-86c4-d13cba8d9ea6",
+          "name": "string"
+        }
+      ]
+order: 1000

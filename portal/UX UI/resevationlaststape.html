@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>YaanCarz - Récapitulatif de réservation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <script src="js/app.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+                <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+                    <a href="aceuil.html" class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+                        <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="aceuil.html">Accueil</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="resultsearch.html">Réserver</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="agences.html">Agences</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="profile.html">Mes Réservations</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a href="login.html" class="flex items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-all">
+                            Déconnexion
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex flex-1 justify-center py-8">
+                <div class="layout-content-container flex flex-col max-w-[1100px] flex-1 px-4 md:px-10">
+                    <!-- Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">Étape 2 sur 3</span>
+                                <h2 class="text-xl font-bold">Récapitulatif</h2>
+                            </div>
+                            <span class="text-sm font-bold bg-primary/10 text-primary px-3 py-1 rounded-full">66% terminé</span>
+                        </div>
+                        <div class="h-3 w-full bg-primary/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-2/3 rounded-full relative">
+                                <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-4">
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-sm">check_circle</span>
+                                <span class="text-xs font-bold uppercase">Client</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-sm">fact_check</span>
+                                <span class="text-xs font-bold uppercase">Récapitulatif</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-400">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                                <span class="text-xs font-bold uppercase">Confirmation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breadcrumbs -->
+                    <div class="flex flex-wrap items-center gap-2 mb-6">
+                        <a class="text-primary text-sm font-medium" href="resultsearch.html">Recherche</a>
+                        <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                        <a class="text-primary text-sm font-medium" href="cardetail.html">Sélection</a>
+                        <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                        <span class="text-slate-900 dark:text-white text-sm font-bold">Récapitulatif & Paiement</span>
+                    </div>
+
+                    <!-- Page Header -->
+                    <div class="flex flex-col gap-2 mb-8">
+                        <h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight">Dernière étape !</h1>
+                        <p class="text-slate-600 dark:text-slate-400 text-base">Vérifiez les détails de votre réservation et acceptez les conditions.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Left Column: Details -->
+                        <div class="lg:col-span-2 flex flex-col gap-6">
+                            <!-- Selected Vehicle Card -->
+                            <div class="flex flex-col md:flex-row items-stretch justify-between gap-6 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                                <div class="flex flex-col justify-between flex-1 gap-4">
+                                    <div>
+                                        <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary mb-2">Véhicule sélectionné</span>
+                                        <p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Range Rover Evoque - Hybride</p>
+                                        <div class="flex items-center gap-2 mt-2 text-slate-600 dark:text-slate-400">
+                                            <span class="material-symbols-outlined">location_on</span>
+                                            <p class="text-sm">Agence: YaanExpress Casablanca</p>
+                                        </div>
+                                        <!-- Agency Badge -->
+                                        <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1 mt-3 w-fit">
+                                            <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/10a24b/ffffff/png?text=Y"/>
+                                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">YAAN EXPRESS</span>
+                                        </div>
+                                        <div class="flex items-center gap-4 mt-4">
+                                            <div class="flex items-center gap-1 text-slate-500 text-sm">
+                                                <span class="material-symbols-outlined">settings</span>
+                                                <span>Automatique</span>
+                                            </div>
+                                            <div class="flex items-center gap-1 text-slate-500 text-sm">
+                                                <span class="material-symbols-outlined">person</span>
+                                                <span>5 Places</span>
+                                            </div>
+                                            <div class="flex items-center gap-1 text-slate-500 text-sm">
+                                                <span class="material-symbols-outlined">ac_unit</span>
+                                                <span>Clim</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-64 bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl overflow-hidden flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-6xl text-slate-400">directions_car</span>
+                                </div>
+                            </div>
+
+                            <!-- Customer Info Summary -->
+                            <div class="rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">person</span>
+                                    Informations du conducteur
+                                </h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase">Nom complet</p>
+                                        <p class="font-medium">Mohammed Alami</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase">Téléphone</p>
+                                        <p class="font-medium">+212 6 12 34 56 78</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase">Email</p>
+                                        <p class="font-medium">m.alami@email.com</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase">Permis</p>
+                                        <p class="font-medium">12/345678</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms & Conditions -->
+                            <div class="rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">gavel</span>
+                                    Conditions de location
+                                </h3>
+                                <div class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                                    <div class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                        <span>Caution de 5,000 MAD requise à la prise en charge (remboursée sous 48h)</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                        <span>Le conducteur doit avoir au moins 23 ans et 2 ans de permis</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                        <span>Présentation du permis de conduire et de la CIN obligatoire</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                        <span>Annulation gratuite jusqu'à 24h avant le départ</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accept Terms Checkbox -->
+                            <div class="flex items-start gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <input id="acceptTerms" class="mt-1 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+                                <label for="acceptTerms" class="text-sm text-slate-600 dark:text-slate-400">
+                                    J'accepte les <a class="text-primary hover:underline font-medium" href="#">conditions générales de vente</a> et la <a class="text-primary hover:underline font-medium" href="#">politique de confidentialité</a> de YaanCarz Maroc.
+                                </label>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="reservationconfirm.html?carId=1&city=Casablanca&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="flex-1 px-6 py-4 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-xl font-medium text-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    Retour
+                                </a>
+                                <a href="resevationsucses.html" id="confirmBtn" class="flex-1 px-6 py-4 bg-primary text-white rounded-xl font-bold text-center hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 opacity-50 pointer-events-none">
+                                    Confirmer la réservation
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Summary Sidebar -->
+                        <div class="lg:col-span-1">
+                            <div class="sticky top-24 flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Résumé des coûts</h3>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-600 dark:text-slate-400">Prix par jour (x3 jours)</span>
+                                        <span class="font-medium text-slate-900 dark:text-white">600 MAD</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-600 dark:text-slate-400">Assurance Collision (CDW)</span>
+                                        <span class="font-medium text-primary">Inclus</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-600 dark:text-slate-400">Frais d'agence</span>
+                                        <span class="font-medium text-slate-900 dark:text-white">45 MAD</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-600 dark:text-slate-400">Taxes (TVA 20%)</span>
+                                        <span class="font-medium text-slate-900 dark:text-white">359 MAD</span>
+                                    </div>
+                                    <hr class="border-slate-100 dark:border-slate-800"/>
+                                    <div class="flex justify-between items-end">
+                                        <div>
+                                            <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Total à payer</p>
+                                            <p class="text-3xl font-black text-primary tracking-tighter">2,154 MAD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+                                    <div class="flex flex-col gap-3 mb-6">
+                                        <div class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-primary mt-0.5">calendar_today</span>
+                                            <div>
+                                                <p class="text-xs text-slate-500">Dates</p>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">12 Mar à 09:00 – 15 Mar à 18:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-primary mt-0.5">near_me</span>
+                                            <div>
+                                                <p class="text-xs text-slate-500">Lieu de prise en charge</p>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Aéroport Mohammed V, Casablanca</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer / Help Section -->
+                    <div class="mt-12 py-8 border-t border-slate-200 dark:border-slate-800 text-center">
+                        <p class="text-slate-500 text-sm mb-4">Besoin d'aide pour finaliser votre réservation ?</p>
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <div class="flex items-center gap-2 text-primary font-semibold">
+                                <span class="material-symbols-outlined">call</span>
+                                <span>+212 5 22 00 00 00</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary font-semibold">
+                                <span class="material-symbols-outlined">mail</span>
+                                <span>support@yaancarz.ma</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary font-semibold">
+                                <span class="material-symbols-outlined">chat</span>
+                                <span>Chat en direct</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="col-span-2">
+                            <a href="aceuil.html" class="flex items-center gap-2 text-primary mb-6">
+                                <span class="material-symbols-outlined text-2xl">directions_car</span>
+                                <h2 class="text-lg font-bold text-slate-900 dark:text-white">YaanCarz</h2>
+                            </a>
+                            <p class="text-slate-500 max-w-xs text-sm">
+                                Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Liens rapides</h4>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li><a class="hover:text-primary transition-colors" href="aceuil.html">Accueil</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="resultsearch.html">Réserver</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="agences.html">Agences</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="profile.html">Mes Réservations</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Légal</h4>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li><a class="hover:text-primary transition-colors" href="#">À propos</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Conditions</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                        <p>© 2024 YaanCarz. Tous droits réservés.</p>
+                        <div class="flex gap-6">
+                            <a class="hover:text-slate-600" href="#">Facebook</a>
+                            <a class="hover:text-slate-600" href="#">Instagram</a>
+                            <a class="hover:text-slate-600" href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Enable confirm button only when terms are accepted
+        document.getElementById('acceptTerms').addEventListener('change', function() {
+            const confirmBtn = document.getElementById('confirmBtn');
+            if (this.checked) {
+                confirmBtn.classList.remove('opacity-50', 'pointer-events-none');
+            } else {
+                confirmBtn.classList.add('opacity-50', 'pointer-events-none');
+            }
+        });
+    </script>
+</body>
+</html>

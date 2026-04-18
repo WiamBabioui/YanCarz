@@ -1,0 +1,57 @@
+$kind: http-request
+name: /api/portal/ResearchRequest
+url: "{{baseUrl}}/api/portal/ResearchRequest?DepartureDate=1954-10-12T15:16:07.\
+  623Z&ReturnDate=1954-10-12T15:16:07.623Z&DepartureTime=16:03:38.016Z&ReturnTi\
+  me=16:03:38.016Z&PickupLocationId=eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d&DropOf\
+  fLocationId=eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d&AgencyIds=54f82717-e057-5aae\
+  -c7c6-c8ea91dd7436&AgencyIds=a13c47e7-a8c5-c895-ef6c-ddf1693a3b9d&ModelIds=54\
+  f82717-e057-5aae-c7c6-c8ea91dd7436&ModelIds=a13c47e7-a8c5-c895-ef6c-ddf1693a3\
+  b9d&TypeModels=6&TypeModels=4&FuelType=1&MinPricePerDay=965.4919775072091&Max\
+  PricePerDay=965.4919775072091&NbrSeats=7046&MinYear=7046&MaxYear=7046&Page=70\
+  46&PageSize=7046"
+method: GET
+headers:
+  Accept: text/plain
+queryParams:
+  - key: DepartureDate
+    value: 1954-10-12T15:16:07.623Z
+  - key: ReturnDate
+    value: 1954-10-12T15:16:07.623Z
+  - key: DepartureTime
+    value: 16:03:38.016Z
+  - key: ReturnTime
+    value: 16:03:38.016Z
+  - key: PickupLocationId
+    value: eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d
+  - key: DropOffLocationId
+    value: eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d
+  - key: AgencyIds
+    value: 54f82717-e057-5aae-c7c6-c8ea91dd7436
+  - key: AgencyIds
+    value: a13c47e7-a8c5-c895-ef6c-ddf1693a3b9d
+  - key: ModelIds
+    value: 54f82717-e057-5aae-c7c6-c8ea91dd7436
+  - key: ModelIds
+    value: a13c47e7-a8c5-c895-ef6c-ddf1693a3b9d
+  - key: TypeModels
+    value: "6"
+  - key: TypeModels
+    value: "4"
+  - key: FuelType
+    value: "1"
+  - key: MinPricePerDay
+    value: "965.4919775072091"
+  - key: MaxPricePerDay
+    value: "965.4919775072091"
+  - key: NbrSeats
+    value: "7046"
+  - key: MinYear
+    value: "7046"
+  - key: MaxYear
+    value: "7046"
+  - key: Page
+    value: "7046"
+  - key: PageSize
+    value: "7046"
+examples: ./.resources/-api-portal-ResearchRequest.resources/examples
+order: 1000

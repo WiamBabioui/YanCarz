@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/Mark
+url: "{{baseUrl}}/api/shared/Mark"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-shared-Mark.resources/examples
+order: 2000

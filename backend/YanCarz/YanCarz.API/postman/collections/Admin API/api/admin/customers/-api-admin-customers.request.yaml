@@ -1,0 +1,6 @@
+$kind: http-request
+name: /api/admin/customers
+url: "{{baseUrl}}/api/admin/customers"
+method: GET
+examples: ./.resources/-api-admin-customers.resources/examples
+order: 2000

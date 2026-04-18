@@ -1,0 +1,11 @@
+$kind: http-request
+name: /api/shared/Country
+url: "{{baseUrl}}/api/shared/Country"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: string
+examples: ./.resources/-api-shared-Country 1.resources/examples
+order: 3000

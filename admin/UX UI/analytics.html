@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div>
+                    <div class="logo-text">YanCarz</div>
+                    <div class="logo-subtext">Pro</div>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="menu-section-title">Main</li>
+                <li class="menu-item">
+                    <a href="dashboard.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Management</li>
+                <li class="menu-item">
+                    <a href="agencies.html" class="menu-link">
+                        <i class="fas fa-building"></i>
+                        <span>Agencies</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span>Users</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Insights</li>
+                <li class="menu-item">
+                    <a href="analytics.html" class="menu-link active">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Preferences</li>
+                <li class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="menu-item" style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+                    <a href="#" class="menu-link" onclick="handleLogout(event)">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <button class="toggle-sidebar-btn" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <button class="icon-btn with-notification">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                    <div class="user-profile">
+                        <div class="avatar">AD</div>
+                        <div class="user-info">
+                            <div class="user-name">Admin</div>
+                            <div class="user-role">Administrator</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div class="page-header">
+                    <h1>Analytics & Reports</h1>
+                    <p>Detailed insights into platform performance and user behavior</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i> 15%
+                            </div>
+                        </div>
+                        <div class="stat-label">Page Views</div>
+                        <div class="stat-value">28.5K</div>
+                        <div class="stat-change">Trending up</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon green">
+                                <i class="fas fa-mouse"></i>
+                            </div>
+                            <div class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i> 0.45%
+                            </div>
+                        </div>
+                        <div class="stat-label">Click-Through Rate</div>
+                        <div class="stat-value">3.24%</div>
+                        <div class="stat-change">New record</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon amber">
+                                <i class="fas fa-hourglass-half"></i>
+                            </div>
+                            <div class="stat-trend negative">
+                                <i class="fas fa-arrow-down"></i> 12s
+                            </div>
+                        </div>
+                        <div class="stat-label">Avg. Session Time</div>
+                        <div class="stat-value">4:23</div>
+                        <div class="stat-change">Slight decrease</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon red">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </div>
+                            <div class="stat-trend negative">
+                                <i class="fas fa-arrow-up"></i> 2.1%
+                            </div>
+                        </div>
+                        <div class="stat-label">Bounce Rate</div>
+                        <div class="stat-value">42.3%</div>
+                        <div class="stat-change">Needs attention</div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>User Growth</h2>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="userGrowthChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Revenue Distribution</h2>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="revenueDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Daily Analytics</h2>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Users</th>
+                                    <th>Sessions</th>
+                                    <th>Pageviews</th>
+                                    <th>Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody id="analyticsTable">
+                                <tr>
+                                    <td>2024-02-21</td>
+                                    <td>245</td>
+                                    <td>456</td>
+                                    <td>1,234</td>
+                                    <td><strong>$1,245</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-22</td>
+                                    <td>267</td>
+                                    <td>512</td>
+                                    <td>1,456</td>
+                                    <td><strong>$1,567</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-23</td>
+                                    <td>289</td>
+                                    <td>578</td>
+                                    <td>1,678</td>
+                                    <td><strong>$1,834</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-24</td>
+                                    <td>301</td>
+                                    <td>623</td>
+                                    <td>1,845</td>
+                                    <td><strong>$2,123</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-25</td>
+                                    <td>312</td>
+                                    <td>656</td>
+                                    <td>1,923</td>
+                                    <td><strong>$2,234</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-26</td>
+                                    <td>324</td>
+                                    <td>712</td>
+                                    <td>2,045</td>
+                                    <td><strong>$2,456</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-27</td>
+                                    <td>335</td>
+                                    <td>756</td>
+                                    <td>2,134</td>
+                                    <td><strong>$2,567</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check authentication
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            drawUserGrowthChart();
+            drawRevenueDistributionChart();
+        });
+
+        function drawUserGrowthChart() {
+            const canvas = document.getElementById('userGrowthChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+
+            const data = [450, 520, 580, 620, 680, 720, 780, 850];
+            const max = Math.max(...data);
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 40;
+            const chartWidth = width - 2 * padding;
+            const chartHeight = height - 2 * padding;
+
+            // Draw grid
+            ctx.strokeStyle = 'rgba(99, 91, 255, 0.1)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) {
+                const y = padding + (chartHeight / 4) * i;
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+
+            // Draw line
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            data.forEach((value, idx) => {
+                const x = padding + (chartWidth / (data.length - 1)) * idx;
+                const y = height - padding - (value / max) * chartHeight;
+                idx === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+
+            // Draw area
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.1)';
+            ctx.lineTo(width - padding, height - padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.fill();
+
+            // Draw points
+            ctx.fillStyle = '#10b981';
+            data.forEach((value, idx) => {
+                const x = padding + (chartWidth / (data.length - 1)) * idx;
+                const y = height - padding - (value / max) * chartHeight;
+                ctx.beginPath();
+                ctx.arc(x, y, 5, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function drawRevenueDistributionChart() {
+            const canvas = document.getElementById('revenueDistributionChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+
+            const width = canvas.width;
+            const height = canvas.height;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const radius = Math.min(width, height) / 3;
+
+            const data = [30, 25, 20, 15, 10];
+            const colors = ['#635bff', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
+            let currentAngle = -Math.PI / 2;
+
+            data.forEach((value, idx) => {
+                const sliceAngle = (value / 100) * Math.PI * 2;
+
+                // Draw slice
+                ctx.fillStyle = colors[idx];
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, currentAngle, currentAngle + sliceAngle);
+                ctx.closePath();
+                ctx.fill();
+
+                currentAngle += sliceAngle;
+            });
+
+            // Draw center circle for donut
+            ctx.fillStyle = '#f9fafb';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius * 0.6, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    </script>
+</body>
+</html>

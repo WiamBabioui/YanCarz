@@ -1,0 +1,17 @@
+$kind: http-request
+name: /api/shared/Mark/:id
+url: "{{baseUrl}}/api/shared/Mark/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+pathVariables:
+  id: f566281a-ea23-a3b4-131c-3187fcd951bb
+body:
+  type: json
+  content: |-
+    {
+      "id": "00fd3515-b619-c4eb-5e69-f3cca375c96c",
+      "name": "string"
+    }
+examples: ./.resources/-api-shared-Mark-id 1.resources/examples
+order: 2000

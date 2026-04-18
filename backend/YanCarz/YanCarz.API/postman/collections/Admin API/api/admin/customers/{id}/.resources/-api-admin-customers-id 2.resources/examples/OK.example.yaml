@@ -1,0 +1,13 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/admin/customers/:id"
+  method: DELETE
+  pathVariables:
+    id: 9d24f0e5-eaf5-a759-3bee-bfe1d1d49e0a
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

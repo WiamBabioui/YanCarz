@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/Place/:id
+url: "{{baseUrl}}/api/shared/Place/:id"
+method: DELETE
+pathVariables:
+  id: f566281a-ea23-a3b4-131c-3187fcd951bb
+examples: ./.resources/-api-shared-Place-id 2.resources/examples
+order: 3000

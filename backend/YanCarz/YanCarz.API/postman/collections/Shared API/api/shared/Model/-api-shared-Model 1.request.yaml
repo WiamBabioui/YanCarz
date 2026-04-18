@@ -1,0 +1,16 @@
+$kind: http-request
+name: /api/shared/Model
+url: "{{baseUrl}}/api/shared/Model"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "string",
+      "markId": "1605a2a8-42f4-4f40-9347-bd5d2ba8fea4",
+      "typeModel": 7971
+    }
+examples: ./.resources/-api-shared-Model 1.resources/examples
+order: 3000

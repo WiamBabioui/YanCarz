@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/agency/AgencyCar
+url: "{{baseUrl}}/api/agency/AgencyCar"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-agency-AgencyCar.resources/examples
+order: 2000

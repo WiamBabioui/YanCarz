@@ -1,0 +1,22 @@
+$kind: http-request
+name: /api/AgencyUser/:id
+url: "{{baseUrl}}/api/AgencyUser/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+pathVariables:
+  id: 60626033-da0a-44c5-6cf5-e81ee0c0baa0
+body:
+  type: json
+  content: |-
+    {
+      "id": "7d4f07f8-6a04-5c9f-2f14-81182d0fad31",
+      "firstName": "string",
+      "lastName": "string",
+      "eMail": "string",
+      "telephone": "string",
+      "status": "string",
+      "agencyId": "f59e8da0-092f-785e-f90e-f2d9e16378ff"
+    }
+examples: ./.resources/-api-AgencyUser-id 1.resources/examples
+order: 2000

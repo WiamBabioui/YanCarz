@@ -1,0 +1,23 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/City/:id"
+  method: GET
+  headers:
+    Accept: text/plain
+  pathVariables:
+    id: f566281a-ea23-a3b4-131c-3187fcd951bb
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "356d0614-0f8b-1504-c7b7-7c2b35d1ab8d",
+        "name": "string",
+        "countryName": "string",
+        "countryId": "33b83e34-aefb-da00-d79a-a73729403aa7"
+      }
+order: 1000

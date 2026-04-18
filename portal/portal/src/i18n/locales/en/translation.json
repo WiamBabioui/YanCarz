@@ -1,0 +1,268 @@
+
+  {
+  "footer": {
+    "description": "The first multi-agency car rental comparison platform in Morocco. Find the best price in one click.",
+    "quickLinks": "Quick links",
+    "legal": "Legal",
+    "about": "About",
+    "terms": "Terms",
+    "privacy": "Privacy policy",
+    "contact": "Contact",
+    "rights": "© 2024 YanCarz. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "back": "Back",
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "save": "Save",
+    "important": "Important",
+    "optional": "optional",
+    "days": "days",
+    "at": "at",
+    "seats": "seats"
+  },
+  "booking": {
+    "client": "Client",
+    "summary": "Summary",
+    "confirmation": "Confirmation"
+  },
+  "confirm": {
+    "stepLabel": "Step 3 of 3",
+    "title": "Confirmation",
+    "done": "100% completed",
+    "codeToShow": "Code to show at the agency",
+    "keepCode": "Keep this code. You will give it to the agent to collect the vehicle.",
+    "vehicle": "Vehicle",
+    "agency": "Agency",
+    "nextSteps": "Next steps",
+    "required": "required",
+    "acceptTerms": "I accept the terms and conditions of sale.",
+    "confirmBooking": "Confirm booking",
+    "duration": "Duration",
+    "importantNote": "At the agency: License + ID + Code.",
+    "steps": {
+      "goAgency": "Go to the agency",
+      "goAgencyDesc": "Mohammed V Airport, Casablanca (CMN)",
+      "presentDocs": "Present your documents",
+      "presentDocsDesc": "License + ID + reservation email",
+      "giveCode": "Give the code",
+      "giveCodeDesc": "Code:",
+      "payDeposit": "Pay the deposit",
+      "payDepositDesc": "5,000 MAD (refundable)"
+    }
+  },
+  "info": {
+    "stepLabel": "Step 1 of 3",
+    "title": "Client information",
+    "done": "33% completed",
+    "personalDetails": "Personal details",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Ex: Mohammed Alami",
+    "phone": "Phone",
+    "license": "Driver license number",
+    "cin": "ID number",
+    "acceptPrivacy": "I accept that my data may be used to process this reservation according to the privacy policy.",
+    "rentalDates": "Rental dates",
+    "pickup": "Pickup",
+    "return": "Return",
+    "deposit": "Deposit",
+    "pickupAgency": "Pickup agency",
+    "pickupAgencyPlace": "Casablanca Airport (CMN)"
+  },
+  "success": {
+    "title": "Booking confirmed!",
+    "subtitle": "Your booking has been successfully registered.",
+    "reference": "Booking reference",
+    "keepReference": "Keep this reference",
+    "viewBookings": "View my bookings",
+    "backHome": "Back to home"
+  },
+  "summary": {
+    "stepLabel": "Step 2 of 3",
+    "done": "66% completed",
+    "selectedVehicle": "Selected vehicle",
+    "driverInfo": "Driver information",
+    "rentalConditions": "Rental conditions",
+    "acceptPrefix": "I accept the",
+    "saleTerms": "terms and conditions of sale",
+    "and": "and the",
+    "costsTitle": "Cost summary",
+    "pricePerDay": "Price per day",
+    "vat": "VAT (20%)",
+    "totalToPay": "Total to pay",
+    "dates": "Dates",
+    "place": "Location",
+    "placeValue": "Mohammed V Airport, Casablanca",
+    "editSearch": "Edit search",
+    "conditions": {
+      "deposit": "5,000 MAD deposit required at pickup (refunded within 48h)",
+      "driverAge": "Driver must be at least 23 years old and have 2 years of license",
+      "documents": "Driver license and ID must be presented",
+      "freeCancellation": "Free cancellation up to 24h before departure"
+    }
+  },
+  "profile": {
+    "reservations": "My reservations",
+    "myProfile": "My profile",
+    "documents": "My documents",
+    "preferences": "Preferences",
+    "changePhoto": "Change photo",
+    "photoHint": "JPG, PNG. Max 2 MB.",
+    "logout": "Logout"
+  },
+  "documents": {
+    "license": "Driver license",
+    "identityCard": "Identity card",
+    "validUntil": "Valid until",
+    "verified": "Verified"
+  },
+  "preferences": {
+    "notifications": "Notifications",
+    "confirmationEmails": "Confirmation emails",
+    "rentalReminders": "Rental reminders",
+    "promotionalOffers": "Promotional offers",
+    "languageRegion": "Language and region",
+    "language": "Language",
+    "currency": "Currency",
+    "save": "Save preferences"
+  },
+  "reservations": {
+    "confirmed": "Confirmed",
+    "finished": "Completed",
+    "reference": "Reference",
+    "invoice": "Invoice",
+    "rentAgain": "Rent again"
+  }
+,
+  "nav": {
+    "home": "Home",
+    "book": "Book",
+    "agencies": "Agencies",
+    "reservations": "My Reservations",
+    "account": "My Account",
+    "clientArea": "Client Area",
+    "profile": "Profile"
+  },
+  "home": {
+    "title1": "Rent a car",
+    "title2": "with ease",
+    "subtitle": "Compare offers from the best agencies in Morocco and book your ideal vehicle in just a few clicks.",
+    "city": "City",
+    "pickupDate": "Pick-up date",
+    "returnDate": "Return date",
+    "search": "Search",
+    "whyTitle": "Why choose YanCarz?",
+    "whySubtitle": "Car rental made simple with the best agencies in Morocco",
+    "destinationsTitle": "Popular destinations",
+    "destinationsSubtitle": "Rent a car in the main cities of Morocco",
+    "from": "From",
+    "errors": {
+      "minReturnDate": "The return date must be at least 3 days after the pick-up date."
+    },
+    "features": {
+      "bestPrices": {
+        "title": "Best prices",
+        "desc": "Compare rates from multiple agencies in real time"
+      },
+      "secureBooking": {
+        "title": "Secure booking",
+        "desc": "Secure payment and instant confirmation"
+      },
+      "freeCancellation": {
+        "title": "Free cancellation",
+        "desc": "Cancel free of charge up to 24 hours before pick-up"
+      },
+      "support": {
+        "title": "24/7 support",
+        "desc": "Customer assistance available at any time"
+      }
+    }
+  },
+  "agencies": {
+    "title1": "Our partner",
+    "title2": "agencies",
+    "subtitle": "Discover our network of trusted agencies across Morocco. Carefully selected professionals to offer you the best rental service.",
+    "viewVehicles": "View vehicles",
+    "loading": "Loading agencies...",
+    "empty": "No agencies found.",
+    "unnamed": "Unnamed agency",
+    "reviews": "Customer reviews",
+    "emailUnavailable": "email not available",
+    "phoneUnavailable": "phone not available",
+    "defaultAddress": "Morocco",
+    
+    "details": "View vehicles"
+  },
+  "details": {
+    "back": "Back to results",
+    "mainFeatures": "Main features",
+    "highlights": "Highlights",
+    "summary": "Summary",
+    "city": "City",
+    "datesHours": "Dates & times",
+    "from": "From",
+    "estimatedTotal": "Estimated total",
+    "bookNow": "Book now",
+    "securePayment": "Secure payment • Instant confirmation"
+  },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Access your account",
+    "email": "Email address",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot password?",
+    "submit": "Sign in",
+    "orContinue": "Or continue with",
+    "google": "Continue with Google",
+    "facebook": "Continue with Facebook",
+    "noAccount": "Don't have an account yet?",
+    "createAccount": "Create an account",
+    "demo": "Demo mode: click Sign in"
+  },
+  "register": {
+    "title": "Create an account",
+    "subtitle": "Join YanCarz and manage your reservations easily",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "terms": "terms and conditions",
+    "privacy": "privacy policy",
+    "submit": "Create my account",
+    "orContinue": "Or continue with",
+    "hasAccount": "Already have an account?",
+    "login": "Sign in",
+    "demo": "Demo mode: click Create my account"
+  },
+  "search": {
+    "filters": "Filters",
+    "reset": "Reset",
+    "vehiclesAvailable": "vehicles available",
+    "pricePerDay": "Price per day",
+    "transmission": "Transmission",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "fuel": "Fuel",
+    "category": "Category",
+    "moreOptions": "More options",
+    "freeCancellation": "Free cancellation",
+    "vehiclesFound": "vehicles found",
+    "sortBy": "Sort by",
+    "relevance": "Relevance",
+    "priceLow": "Price: Low to High",
+    "priceHigh": "Price: High to Low",
+    "bestRating": "Best Rating",
+    "popular": "Popular",
+    "from": "From",
+    "total": "Total",
+    "viewDetails": "View details"
+  },  "currency": {
+    "Day":"Day",
+   
+    "mad":"MAD"
+  }
+}

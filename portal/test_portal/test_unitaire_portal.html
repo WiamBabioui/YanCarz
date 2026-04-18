@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>QA Report - Unitaire Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-indigo-700 p-6 text-white shadow-2xl flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3 font-extrabold text-2xl tracking-tighter">
+            <i class="fas fa-car-side animate-bounce"></i> YANCARZ <span class="font-light opacity-80">PORTAL</span>
+        </div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="test_unitaire_portal.html" class="border-b-4 border-white pb-1">Unitaire</a>
+            <a href="test_integration_portal.html" class="opacity-60 hover:opacity-100 transition">Intégration</a>
+            <a href="test_e2e_portal.html" class="opacity-60 hover:opacity-100 transition">End-to-End</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto py-16 px-6">
+        <div class="mb-12">
+            <h1 class="text-5xl font-black text-slate-900">Audit Unitaire UI/UX</h1>
+            <p class="text-slate-500 mt-4 text-lg">Validation visuelle des composants en environnement de Production.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Stat 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-xl border-b-8 border-emerald-500">
+                <div class="text-emerald-500 text-4xl mb-4"><i class="fas fa-check-double"></i></div>
+                <h3 class="text-xl font-extrabold text-slate-800">Composants</h3>
+                <p class="text-4xl font-black text-slate-900 mt-2">100%</p>
+                <p class="text-slate-400 text-sm mt-1 uppercase font-bold">Conformité</p>
+            </div>
+            <!-- Stat 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-xl border-b-8 border-indigo-500">
+                <div class="text-indigo-500 text-4xl mb-4"><i class="fas fa-icons"></i></div>
+                <h3 class="text-xl font-extrabold text-slate-800">Icônes</h3>
+                <p class="text-4xl font-black text-slate-900 mt-2">12</p>
+                <p class="text-slate-400 text-sm mt-1 uppercase font-bold">Material Symbols</p>
+            </div>
+        </div>
+
+        <div class="mt-12 space-y-4">
+            <div class="bg-white p-6 rounded-2xl flex justify-between items-center shadow-md hover:scale-[1.01] transition">
+                <div class="flex items-center gap-6">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-image"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Identité Visuelle & Logo</h4>
+                        <p class="text-slate-400 text-sm italic">Positionnement Header et rendu SVG validé.</p>
+                    </div>
+                </div>
+                <span class="text-emerald-500 font-black tracking-widest text-xs bg-emerald-50 px-4 py-2 rounded-lg">PASSED</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

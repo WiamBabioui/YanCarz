@@ -1,0 +1,269 @@
+{
+  
+  "footer": {
+    "description": "أول منصة مقارنة لتأجير السيارات متعددة الوكالات في المغرب. اعثر على أفضل سعر بنقرة واحدة.",
+    "quickLinks": "روابط سريعة",
+    "legal": "قانوني",
+    "about": "حول",
+    "terms": "الشروط",
+    "privacy": "سياسة الخصوصية",
+    "contact": "اتصل بنا",
+    "rights": "© 2024 YanCarz. جميع الحقوق محفوظة."
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "back": "رجوع",
+    "continue": "متابعة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "important": "مهم",
+    "optional": "اختياري",
+    "days": "أيام",
+    "at": "في",
+    "seats": "مقاعد"
+  },
+  "booking": {
+    "client": "العميل",
+    "summary": "الملخص",
+    "confirmation": "التأكيد"
+  },
+  "confirm": {
+    "stepLabel": "الخطوة 3 من 3",
+    "title": "التأكيد",
+    "done": "100% مكتمل",
+    "codeToShow": "الرمز الذي يجب تقديمه للوكالة",
+    "keepCode": "احتفظ بهذا الرمز. ستقدمه للوكيل لاستلام السيارة.",
+    "vehicle": "المركبة",
+    "agency": "الوكالة",
+    "nextSteps": "الخطوات التالية",
+    "required": "إلزامي",
+    "acceptTerms": "أوافق على الشروط العامة للبيع.",
+    "confirmBooking": "تأكيد الحجز",
+    "duration": "المدة",
+    "importantNote": "في الوكالة: رخصة القيادة + بطاقة الهوية + الرمز.",
+    "steps": {
+      "goAgency": "اذهب إلى الوكالة",
+      "goAgencyDesc": "مطار محمد الخامس، الدار البيضاء (CMN)",
+      "presentDocs": "قدم وثائقك",
+      "presentDocsDesc": "رخصة القيادة + بطاقة الهوية + بريد الحجز",
+      "giveCode": "قدم الرمز",
+      "giveCodeDesc": "الرمز:",
+      "payDeposit": "ادفع مبلغ التأمين",
+      "payDepositDesc": "5000 درهم (قابل للاسترجاع)"
+    }
+  },
+  "info": {
+    "stepLabel": "الخطوة 1 من 3",
+    "title": "معلومات العميل",
+    "done": "33% مكتمل",
+    "personalDetails": "المعلومات الشخصية",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "مثال: محمد العلوي",
+    "phone": "الهاتف",
+    "license": "رقم رخصة القيادة",
+    "cin": "رقم بطاقة الهوية",
+    "acceptPrivacy": "أوافق على استخدام بياناتي لمعالجة هذا الحجز وفقًا لسياسة الخصوصية.",
+    "rentalDates": "تواريخ الإيجار",
+    "pickup": "الاستلام",
+    "return": "الإرجاع",
+    "deposit": "التأمين",
+    "pickupAgency": "وكالة الاستلام",
+    "pickupAgencyPlace": "مطار الدار البيضاء (CMN)"
+  },
+  "success": {
+    "title": "تم تأكيد الحجز!",
+    "subtitle": "تم تسجيل حجزك بنجاح.",
+    "reference": "مرجع الحجز",
+    "keepReference": "احتفظ بهذا المرجع",
+    "viewBookings": "عرض حجوزاتي",
+    "backHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "summary": {
+    "stepLabel": "الخطوة 2 من 3",
+    "done": "66% مكتمل",
+    "selectedVehicle": "المركبة المختارة",
+    "driverInfo": "معلومات السائق",
+    "rentalConditions": "شروط الإيجار",
+    "acceptPrefix": "أوافق على",
+    "saleTerms": "الشروط العامة للبيع",
+    "and": "و",
+    "costsTitle": "ملخص التكاليف",
+    "pricePerDay": "السعر في اليوم",
+    "vat": "الضريبة (20%)",
+    "totalToPay": "الإجمالي للدفع",
+    "dates": "التواريخ",
+    "place": "المكان",
+    "placeValue": "مطار محمد الخامس، الدار البيضاء",
+    "editSearch": "تعديل البحث",
+    "conditions": {
+      "deposit": "مطلوب تأمين قدره 5000 درهم عند الاستلام (يُعاد خلال 48 ساعة)",
+      "driverAge": "يجب أن يكون عمر السائق 23 سنة على الأقل ولديه رخصة منذ سنتين",
+      "documents": "يجب تقديم رخصة القيادة وبطاقة الهوية",
+      "freeCancellation": "إلغاء مجاني حتى 24 ساعة قبل موعد الانطلاق"
+    }
+  },
+  "profile": {
+    "reservations": "حجوزاتي",
+    "myProfile": "ملفي الشخصي",
+    "documents": "وثائقي",
+    "preferences": "الإعدادات",
+    "changePhoto": "تغيير الصورة",
+    "photoHint": "JPG أو PNG. الحد الأقصى 2 ميغابايت.",
+    "logout": "تسجيل الخروج"
+  },
+  "documents": {
+    "license": "رخصة القيادة",
+    "identityCard": "بطاقة الهوية",
+    "validUntil": "صالحة حتى",
+    "verified": "تم التحقق"
+  },
+  "preferences": {
+    "notifications": "الإشعارات",
+    "confirmationEmails": "رسائل تأكيد الحجز",
+    "rentalReminders": "تذكيرات الإيجار",
+    "promotionalOffers": "العروض الترويجية",
+    "languageRegion": "اللغة والمنطقة",
+    "language": "اللغة",
+    "currency": "العملة",
+    "save": "حفظ الإعدادات"
+  },
+  "reservations": {
+    "confirmed": "مؤكد",
+    "finished": "مكتمل",
+    "reference": "المرجع",
+    "invoice": "الفاتورة",
+    "rentAgain": "استئجار مرة أخرى"
+  }
+,
+  "nav": {
+    "home": "الرئيسية",
+    "book": "احجز",
+    "agencies": "الوكالات",
+    "reservations": "حجوزاتي",
+    "account": "حسابي",
+    "clientArea": "مساحة العميل",
+    "profile": "الملف الشخصي"
+  },
+  "home": {
+    "title1": "استأجر سيارة",
+    "title2": "بكل سهولة",
+    "subtitle": "قارن بين عروض أفضل الوكالات في المغرب واحجز سيارتك المثالية في بضع نقرات فقط.",
+    "city": "المدينة",
+    "pickupDate": "تاريخ الاستلام",
+    "returnDate": "تاريخ الإرجاع",
+    "search": "بحث",
+    "whyTitle": "لماذا تختار YanCarz؟",
+    "whySubtitle": "تأجير السيارات بطريقة سهلة مع أفضل الوكالات في المغرب",
+    "destinationsTitle": "الوجهات الشائعة",
+    "destinationsSubtitle": "استأجر سيارة في أهم مدن المغرب",
+    "from": "ابتداءً من",
+    "errors": {
+      "minReturnDate": "يجب أن يكون تاريخ الإرجاع بعد تاريخ الاستلام بثلاثة أيام على الأقل."
+    },
+    "features": {
+      "bestPrices": {
+        "title": "أفضل الأسعار",
+        "desc": "قارن الأسعار من عدة وكالات في الوقت الفعلي"
+      },
+      "secureBooking": {
+        "title": "حجز آمن",
+        "desc": "دفع آمن وتأكيد فوري"
+      },
+      "freeCancellation": {
+        "title": "إلغاء مجاني",
+        "desc": "ألغِ مجانًا حتى 24 ساعة قبل موعد الاستلام"
+      },
+      "support": {
+        "title": "دعم 24/7",
+        "desc": "مساعدة العملاء متاحة في أي وقت"
+      }
+    }
+  },
+  "agencies": {
+    "title1": "وكالاتنا",
+    "title2": "الشريكة",
+    "subtitle": "اكتشف شبكتنا من الوكالات الموثوقة في جميع أنحاء المغرب. مهنيون تم اختيارهم بعناية لتقديم أفضل خدمة تأجير لك.",
+    "viewVehicles": "عرض السيارات",
+    "loading": "جارٍ تحميل الوكالات...",
+    "empty": "لم يتم العثور على أي وكالة.",
+    "unnamed": "وكالة بدون اسم",
+    "reviews": "آراء العملاء",
+    "emailUnavailable": "البريد الإلكتروني غير متوفر",
+    "phoneUnavailable": "رقم الهاتف غير متوفر",
+    "defaultAddress": "المغرب",
+    "details": "عرض السيارات"
+  },
+  "details": {
+    "back": "العودة إلى النتائج",
+    "mainFeatures": "الخصائص الرئيسية",
+    "highlights": "أبرز المميزات",
+    "summary": "الملخص",
+    "city": "المدينة",
+    "datesHours": "التواريخ والأوقات",
+    "from": "ابتداءً من",
+    "estimatedTotal": "الإجمالي التقديري",
+    "bookNow": "احجز الآن",
+    "securePayment": "دفع آمن • تأكيد فوري"
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "subtitle": "الوصول إلى حسابك",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "remember": "تذكرني",
+    "forgot": "هل نسيت كلمة المرور؟",
+    "submit": "تسجيل الدخول",
+    "orContinue": "أو المتابعة عبر",
+    "google": "المتابعة عبر Google",
+    "facebook": "المتابعة عبر Facebook",
+    "noAccount": "ليس لديك حساب بعد؟",
+    "createAccount": "إنشاء حساب",
+    "demo": "الوضع التجريبي: اضغط على تسجيل الدخول"
+  },
+  "register": {
+    "title": "إنشاء حساب",
+    "subtitle": "انضم إلى YanCarz وقم بإدارة حجوزاتك بسهولة",
+    "firstName": "الاسم الشخصي",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
+    "submit": "إنشاء حسابي",
+    "orContinue": "أو المتابعة عبر",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "login": "تسجيل الدخول",
+    "demo": "الوضع التجريبي: اضغط على إنشاء حسابي"
+  },
+  "search": {
+    "filters": "الفلاتر",
+    "reset": "إعادة التعيين",
+    "vehiclesAvailable": "سيارات متاحة",
+    "pricePerDay": "السعر في اليوم",
+    "transmission": "ناقل الحركة",
+    "automatic": "أوتوماتيكي",
+    "manual": "يدوي",
+    "fuel": "الوقود",
+    "category": "الفئة",
+    "moreOptions": "خيارات إضافية",
+    "freeCancellation": "إلغاء مجاني",
+    "vehiclesFound": "سيارة تم العثور عليها",
+    "sortBy": "ترتيب حسب",
+    "relevance": "الأكثر صلة",
+    "priceLow": "السعر: من الأقل إلى الأعلى",
+    "priceHigh": "السعر: من الأعلى إلى الأقل",
+    "bestRating": "أفضل تقييم",
+    "popular": "الأكثر شعبية",
+    "from": "ابتداءً من",
+    "total": "الإجمالي",
+    "viewDetails": "عرض التفاصيل"
+  },
+  "currency": {
+    "Day": "اليوم",
+   
+    "mad":"درهم"
+  }
+
+}

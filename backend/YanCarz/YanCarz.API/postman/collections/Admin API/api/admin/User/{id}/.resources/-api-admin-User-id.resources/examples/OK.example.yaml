@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/admin/User/:id"
+  method: GET
+  headers:
+    Accept: text/plain
+  pathVariables:
+    id: 9d24f0e5-eaf5-a759-3bee-bfe1d1d49e0a
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "371b50b2-cc8e-358f-eef2-e6e506b7990b",
+        "name": "string",
+        "email": "string"
+      }
+order: 1000

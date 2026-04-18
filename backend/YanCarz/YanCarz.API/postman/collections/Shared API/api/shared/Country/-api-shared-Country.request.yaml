@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/Country
+url: "{{baseUrl}}/api/shared/Country"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-shared-Country.resources/examples
+order: 2000

@@ -1,0 +1,78 @@
+{
+	"id": "69b81da18962558cd629502d",
+	"name": "Agency API",
+	"timestamp": "2026-03-16T15:11:52.804Z",
+	"collection_id": "22E5A3840c02Ed1Ca752E751",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 26,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-16T15:11:29.349Z",
+	"totalFail": 12,
+	"results": [],
+	"count": 1,
+	"totalTime": 0,
+	"collection": {
+		"requests": [
+			{
+				"id": "CAecAc9Edb252855583C32AE"
+			},
+			{
+				"id": "9BDE666B7EdA9fcEDE2ffaBA"
+			},
+			{
+				"id": "AdFaF06E8ec6bb86DF3c7576"
+			},
+			{
+				"id": "D56ad9edbd3b7e0aB188cF7f"
+			},
+			{
+				"id": "7eC0c3f6F9fbF5eD3beFF4A5"
+			},
+			{
+				"id": "34eE8f1ffcb4615f18A3bEBb"
+			},
+			{
+				"id": "aABc6D70cb330f5Da227Fd56"
+			},
+			{
+				"id": "C0b9d26Eb44f7a9aaAAf82Ce"
+			},
+			{
+				"id": "6eF0cD05a102Ecc375e58ea2"
+			},
+			{
+				"id": "3DAF9e0C27B2704B6F566Fd0"
+			},
+			{
+				"id": "73bDABF4ed1E2efcf7EE167e"
+			},
+			{
+				"id": "BCE7BE0F4b21CD4ddE4e4eCa"
+			},
+			{
+				"id": "991EB76EbDAcacAC6422Eefa"
+			},
+			{
+				"id": "4Bee6364DDfe6Abd0fc8FFAe"
+			},
+			{
+				"id": "22Ead4DADBAa148f0aCE9B6C"
+			},
+			{
+				"id": "3c9aFC64b3FeD9ab8Ff93e2D"
+			},
+			{
+				"id": "67DF4307A8A3BEB2dc4CfBf6"
+			},
+			{
+				"id": "fD33c9Bdeb416f6b11bceF5d"
+			},
+			{
+				"id": "A5193A7Ff5FE98FAEeFE95A5"
+			}
+		]
+	}
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>QA Report - E2E Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#0f172a] text-white">
+    <nav class="p-6 border-b border-slate-800 flex justify-between items-center">
+        <div class="flex items-center gap-3 font-extrabold text-2xl"><i class="fas fa-user-check text-emerald-500"></i> YANCARZ <span class="text-emerald-500">E2E</span></div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="test_unitaire_portal.html" class="opacity-60">Unitaire</a>
+            <a href="test_integration_portal.html" class="opacity-60">Intégration</a>
+            <a href="test_e2e_portal.html" class="border-b-4 border-emerald-500 pb-1">End-to-End</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto py-16 px-6">
+        <div class="bg-amber-500/10 border-l-8 border-amber-500 p-10 rounded-3xl mb-12 shadow-2xl">
+            <h2 class="text-2xl font-black text-amber-500 mb-4 uppercase italic">Statut : Instable (Lenteur Critique)</h2>
+            <p class="text-slate-300 text-lg leading-relaxed">
+                "Les tests automatisés révèlent une <strong>latence réseau extrême</strong> sur l'environnement de production. Le serveur Azure met plus de <strong>15 secondes</strong> à répondre, provoquant des ruptures dans le scénario de réservation."
+            </p>
+        </div>
+
+        <div class="space-y-8">
+            <div class="flex items-center gap-8 bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                <div class="w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl font-black">1</div>
+                <div class="flex-1">
+                    <h4 class="text-xl font-bold">Moteur de recherche</h4>
+                    <p class="text-slate-400 italic font-bold text-emerald-400">Fonctionnel mais lent (5.5s)</p>
+                </div>
+                <i class="fas fa-check-circle text-emerald-500 text-3xl"></i>
+            </div>
+            <div class="flex items-center gap-8 bg-slate-800/50 p-6 rounded-2xl border border-slate-700 opacity-40">
+                <div class="w-14 h-14 bg-slate-600 text-white rounded-full flex items-center justify-center text-2xl font-black">2</div>
+                <div class="flex-1">
+                    <h4 class="text-xl font-bold text-slate-500">Paiement & Confirmation</h4>
+                    <p class="text-slate-500">Non testé à cause du Timeout serveur.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

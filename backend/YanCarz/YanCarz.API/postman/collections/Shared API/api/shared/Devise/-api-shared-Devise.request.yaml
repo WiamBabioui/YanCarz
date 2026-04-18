@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/Devise
+url: "{{baseUrl}}/api/shared/Devise"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-shared-Devise.resources/examples
+order: 2000

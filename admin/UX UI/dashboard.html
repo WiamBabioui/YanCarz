@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div>
+                    <div class="logo-text">YanCarz</div>
+                    <div class="logo-subtext">Pro</div>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="menu-section-title">Main</li>
+                <li class="menu-item">
+                    <a href="dashboard.html" class="menu-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Management</li>
+                <li class="menu-item">
+                    <a href="agencies.html" class="menu-link">
+                        <i class="fas fa-building"></i>
+                        <span>Agencies</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span>Users</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Insights</li>
+                <li class="menu-item">
+                    <a href="analytics.html" class="menu-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Preferences</li>
+                <li class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="menu-item" style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+                    <a href="login.html" class="menu-link" >
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <button class="toggle-sidebar-btn" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search anything...">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <button class="icon-btn with-notification">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                    <div class="user-profile">
+                        <div class="avatar">AD</div>
+                        <div class="user-info">
+                            <div class="user-name">Admin</div>
+                            <div class="user-role">Administrator</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's what's happening with your platform today.</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i> 12%
+                            </div>
+                        </div>
+                        <div class="stat-label">Total Agencies</div>
+                        <div class="stat-value">284</div>
+                        <div class="stat-change">From last month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon green">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i> 8%
+                            </div>
+                        </div>
+                        <div class="stat-label">Active Users</div>
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-change">From last month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon amber">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i> 23%
+                            </div>
+                        </div>
+                        <div class="stat-label">Total Bookings</div>
+                        <div class="stat-value">3,892</div>
+                        <div class="stat-change">From last month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon red">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-trend positive">
+                                <i class="fas fa-arrow-up"></i> 5%
+                            </div>
+                        </div>
+                        <div class="stat-label">Total Revenue</div>
+                        <div class="stat-value">$45.2K</div>
+                        <div class="stat-change">From last month</div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Revenue Trend</h2>
+                            <select>
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Bookings Overview</h2>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="bookingsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recent Activity</h2>
+                        <button class="btn btn-secondary btn-sm">
+                            <i class="fas fa-eye"></i> View All
+                        </button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>User</th>
+                                    <th>Agency</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="activityTable">
+                                <tr>
+                                    <td>New Booking</td>
+                                    <td>Alice Chen</td>
+                                    <td>Alpha Travel Co</td>
+                                    <td>2024-02-27</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Agency Registered</td>
+                                    <td>System</td>
+                                    <td>Delta Adventures</td>
+                                    <td>2024-02-26</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Payment Processed</td>
+                                    <td>Bob Martinez</td>
+                                    <td>Beta Tours</td>
+                                    <td>2024-02-26</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>User Created</td>
+                                    <td>Admin</td>
+                                    <td>N/A</td>
+                                    <td>2024-02-25</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Agency Suspended</td>
+                                    <td>Admin</td>
+                                    <td>Gamma Expeditions</td>
+                                    <td>2024-02-24</td>
+                                    <td><span class="badge badge-warning">Warning</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check authentication
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            drawRevenueChart();
+            drawBookingsChart();
+        });
+
+        function drawRevenueChart() {
+            const canvas = document.getElementById('revenueChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+
+            const data = [4200, 3800, 5000, 4500, 6200, 5800, 7100];
+            const max = Math.max(...data);
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 40;
+            const chartWidth = width - 2 * padding;
+            const chartHeight = height - 2 * padding;
+
+            // Draw grid
+            ctx.strokeStyle = 'rgba(99, 91, 255, 0.1)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) {
+                const y = padding + (chartHeight / 4) * i;
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+
+            // Draw line
+            ctx.strokeStyle = '#635bff';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            data.forEach((value, idx) => {
+                const x = padding + (chartWidth / (data.length - 1)) * idx;
+                const y = height - padding - (value / max) * chartHeight;
+                idx === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+
+            // Draw area
+            ctx.fillStyle = 'rgba(99, 91, 255, 0.1)';
+            ctx.lineTo(width - padding, height - padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.fill();
+
+            // Draw points
+            ctx.fillStyle = '#635bff';
+            data.forEach((value, idx) => {
+                const x = padding + (chartWidth / (data.length - 1)) * idx;
+                const y = height - padding - (value / max) * chartHeight;
+                ctx.beginPath();
+                ctx.arc(x, y, 5, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function drawBookingsChart() {
+            const canvas = document.getElementById('bookingsChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+
+            const data = [280, 320, 245, 290, 310, 270, 340];
+            const max = Math.max(...data);
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 40;
+            const chartWidth = width - 2 * padding;
+            const chartHeight = height - 2 * padding;
+            const barWidth = chartWidth / data.length * 0.7;
+
+            // Draw bars
+            const colors = ['#635bff', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4'];
+            data.forEach((value, idx) => {
+                const x = padding + (chartWidth / data.length) * idx + (chartWidth / data.length - barWidth) / 2;
+                const barHeight = (value / max) * chartHeight;
+                const y = height - padding - barHeight;
+
+                ctx.fillStyle = colors[idx];
+                ctx.fillRect(x, y, barWidth, barHeight);
+            });
+
+            // Draw labels
+            ctx.fillStyle = '#6b7280';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'center';
+            const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+            labels.forEach((label, idx) => {
+                const x = padding + (chartWidth / data.length) * idx + chartWidth / data.length / 2;
+                ctx.fillText(label, x, height - 15);
+            });
+        }
+    </script>
+</body>
+</html>

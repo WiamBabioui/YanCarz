@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/City
+url: "{{baseUrl}}/api/shared/City"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-shared-City.resources/examples
+order: 2000

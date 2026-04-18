@@ -1,0 +1,1132 @@
+{
+	"id": "bee8c7e3-946e-477d-9180-104cdda66711",
+	"name": "Shared API",
+	"timestamp": "2026-03-16T09:34:07.162Z",
+	"collection_id": "53116231-3400fd3a-e056-4a5f-ac60-1b1d307e77fa",
+	"folder_id": 0,
+	"environment_id": "53116231-b2d176ef-7717-48d0-a75c-382c5aa925d6",
+	"totalPass": 35,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-16T09:33:52.444Z",
+	"totalFail": 25,
+	"results": [
+		{
+			"id": "2e3b0a93-0b00-4881-9388-c058709abfb5",
+			"name": "/api/shared/City/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/City/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 274,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				274
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "aaf46eea-edd3-4952-b315-89d056ff1368",
+			"name": "/api/shared/City/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/City/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 436,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				436
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "2029e78f-4386-4db9-b9ca-f8d183193857",
+			"name": "/api/shared/City/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/City/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 419,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				419
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "b3145653-cbf0-4193-b5ee-3e68a18d16f7",
+			"name": "/api/shared/City",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/City",
+			"time": 573,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				573
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "1c0874e3-8ddb-4314-8eee-ca9ef7272816",
+			"name": "/api/shared/City",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/City",
+			"time": 258,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "1c6ffe66-edf8-4b2e-89bb-0e72895562a1",
+			"name": "/api/shared/Country/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Country/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 325,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				325
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "313bba09-7c46-486d-aef9-aa5e9f8431e6",
+			"name": "/api/shared/Country/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Country/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 304,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				304
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "a13e4b14-a48e-432e-b0ab-332fa58ec9c7",
+			"name": "/api/shared/Country/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Country/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 398,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				398
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "c93ba64a-adb2-448a-8235-0f99eda42889",
+			"name": "/api/shared/Country",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Country",
+			"time": 525,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				525
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "644014ea-d1a3-4090-b6b0-198c4253323d",
+			"name": "/api/shared/Country",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Country",
+			"time": 210,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				210
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "ea6235f6-b91a-4ef8-ad92-3b06a5336c16",
+			"name": "/api/shared/Devise/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Devise/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 161,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "6eb84b55-4ca9-4c4f-8334-a6de5c73a6a5",
+			"name": "/api/shared/Devise/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Devise/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 153,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "5dc29348-0c65-4c64-86cc-55c433a472e8",
+			"name": "/api/shared/Devise/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Devise/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 156,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "f45af4de-69a6-4806-ac80-52d277ff72d5",
+			"name": "/api/shared/Devise",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Devise",
+			"time": 157,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "40652df4-bde8-477a-9e3d-ac90a8516cf1",
+			"name": "/api/shared/Devise",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Devise",
+			"time": 153,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "d33b2e27-fc65-4518-968e-b722e8deb916",
+			"name": "/api/shared/Mark/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Mark/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 243,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				243
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "8598148c-a49d-4d92-a7ce-7bc655ab68b8",
+			"name": "/api/shared/Mark/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Mark/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 233,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				233
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "ee2b273f-add1-4411-8fd2-433abf652b06",
+			"name": "/api/shared/Mark/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Mark/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 235,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				235
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "a18e953a-97ed-4e43-b8cc-962d944c5300",
+			"name": "/api/shared/Mark",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Mark",
+			"time": 492,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				492
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "a4fc2779-35c6-4dbe-a1df-420ac28b7915",
+			"name": "/api/shared/Mark",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Mark",
+			"time": 266,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				266
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "aabcef34-f6e2-4e49-9959-c68f063a66c8",
+			"name": "/api/shared/Model/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Model/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 470,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				470
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "8d1876eb-9727-48f4-922a-76278f989d6a",
+			"name": "/api/shared/Model/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Model/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 471,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				471
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "14152128-eafc-44ca-858c-1141a18e70a8",
+			"name": "/api/shared/Model/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Model/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 579,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				579
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "8b971a93-d43a-4e42-8680-89be67370743",
+			"name": "/api/shared/Model",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Model",
+			"time": 315,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				315
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "ed865e58-2a93-4669-9031-d564df23cd57",
+			"name": "/api/shared/Model",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Model",
+			"time": 597,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				597
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "1fd72c89-8307-4bc6-b3fb-32ea24fb368e",
+			"name": "/api/shared/Place/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Place/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 415,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				415
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "7a481b32-67af-4882-9e41-c17f0f2f7117",
+			"name": "/api/shared/Place/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Place/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 741,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				741
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "f6f2df2e-dd3b-429a-9469-bfe586b569e0",
+			"name": "/api/shared/Place/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Place/6fc1d4e3-a772-9764-02be-f63f08b618a8",
+			"time": 605,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				605
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "2e59a132-2cb3-4d2e-b4e6-f02054848dbf",
+			"name": "/api/shared/Place",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Place",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				289
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "b3c45aaa-4389-404e-b77b-5771bfc8c6e2",
+			"name": "/api/shared/Place",
+			"url": "https://yancarz-be.azurewebsites.net/api/shared/Place",
+			"time": 590,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				590
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 11043,
+	"collection": {
+		"requests": [
+			{
+				"id": "2e3b0a93-0b00-4881-9388-c058709abfb5",
+				"method": "GET"
+			},
+			{
+				"id": "aaf46eea-edd3-4952-b315-89d056ff1368",
+				"method": "PUT"
+			},
+			{
+				"id": "2029e78f-4386-4db9-b9ca-f8d183193857",
+				"method": "DELETE"
+			},
+			{
+				"id": "b3145653-cbf0-4193-b5ee-3e68a18d16f7",
+				"method": "GET"
+			},
+			{
+				"id": "1c0874e3-8ddb-4314-8eee-ca9ef7272816",
+				"method": "POST"
+			},
+			{
+				"id": "1c6ffe66-edf8-4b2e-89bb-0e72895562a1",
+				"method": "GET"
+			},
+			{
+				"id": "313bba09-7c46-486d-aef9-aa5e9f8431e6",
+				"method": "PUT"
+			},
+			{
+				"id": "a13e4b14-a48e-432e-b0ab-332fa58ec9c7",
+				"method": "DELETE"
+			},
+			{
+				"id": "c93ba64a-adb2-448a-8235-0f99eda42889",
+				"method": "GET"
+			},
+			{
+				"id": "644014ea-d1a3-4090-b6b0-198c4253323d",
+				"method": "POST"
+			},
+			{
+				"id": "ea6235f6-b91a-4ef8-ad92-3b06a5336c16",
+				"method": "GET"
+			},
+			{
+				"id": "6eb84b55-4ca9-4c4f-8334-a6de5c73a6a5",
+				"method": "PUT"
+			},
+			{
+				"id": "5dc29348-0c65-4c64-86cc-55c433a472e8",
+				"method": "DELETE"
+			},
+			{
+				"id": "f45af4de-69a6-4806-ac80-52d277ff72d5",
+				"method": "GET"
+			},
+			{
+				"id": "40652df4-bde8-477a-9e3d-ac90a8516cf1",
+				"method": "POST"
+			},
+			{
+				"id": "d33b2e27-fc65-4518-968e-b722e8deb916",
+				"method": "GET"
+			},
+			{
+				"id": "8598148c-a49d-4d92-a7ce-7bc655ab68b8",
+				"method": "PUT"
+			},
+			{
+				"id": "ee2b273f-add1-4411-8fd2-433abf652b06",
+				"method": "DELETE"
+			},
+			{
+				"id": "a18e953a-97ed-4e43-b8cc-962d944c5300",
+				"method": "GET"
+			},
+			{
+				"id": "a4fc2779-35c6-4dbe-a1df-420ac28b7915",
+				"method": "POST"
+			},
+			{
+				"id": "aabcef34-f6e2-4e49-9959-c68f063a66c8",
+				"method": "GET"
+			},
+			{
+				"id": "8d1876eb-9727-48f4-922a-76278f989d6a",
+				"method": "PUT"
+			},
+			{
+				"id": "14152128-eafc-44ca-858c-1141a18e70a8",
+				"method": "DELETE"
+			},
+			{
+				"id": "8b971a93-d43a-4e42-8680-89be67370743",
+				"method": "GET"
+			},
+			{
+				"id": "ed865e58-2a93-4669-9031-d564df23cd57",
+				"method": "POST"
+			},
+			{
+				"id": "1fd72c89-8307-4bc6-b3fb-32ea24fb368e",
+				"method": "GET"
+			},
+			{
+				"id": "7a481b32-67af-4882-9e41-c17f0f2f7117",
+				"method": "PUT"
+			},
+			{
+				"id": "f6f2df2e-dd3b-429a-9469-bfe586b569e0",
+				"method": "DELETE"
+			},
+			{
+				"id": "2e59a132-2cb3-4d2e-b4e6-f02054848dbf",
+				"method": "GET"
+			},
+			{
+				"id": "b3c45aaa-4389-404e-b77b-5771bfc8c6e2",
+				"method": "POST"
+			}
+		]
+	}
+}

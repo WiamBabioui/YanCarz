@@ -1,0 +1,270 @@
+{
+
+  
+  "footer": {
+    "description": "Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.",
+    "quickLinks": "Liens rapides",
+    "legal": "Légal",
+    "about": "À propos",
+    "terms": "Conditions",
+    "privacy": "Politique de confidentialité",
+    "contact": "Contact",
+    "rights": "© 2024 YanCarz. Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "back": "Retour",
+    "continue": "Continuer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "important": "Important",
+    "optional": "optionnel",
+    "days": "jours",
+    "at": "à",
+    "seats": "places"
+  },
+  "booking": {
+    "client": "Client",
+    "summary": "Récapitulatif",
+    "confirmation": "Confirmation"
+  },
+  "confirm": {
+    "stepLabel": "Étape 3 sur 3",
+    "title": "Confirmation",
+    "done": "100% terminé",
+    "codeToShow": "Code à présenter à l'agence",
+    "keepCode": "Gardez ce code. Vous le donnerez à l’agent pour récupérer le véhicule.",
+    "vehicle": "Véhicule",
+    "agency": "Agence",
+    "nextSteps": "Prochaines étapes",
+    "required": "obligatoire",
+    "acceptTerms": "J'accepte les conditions générales de vente.",
+    "confirmBooking": "Confirmer la réservation",
+    "duration": "Durée",
+    "importantNote": "À l’agence : Permis + CIN + Code.",
+    "steps": {
+      "goAgency": "Allez à l'agence",
+      "goAgencyDesc": "Aéroport Mohammed V, Casablanca (CMN)",
+      "presentDocs": "Présentez vos documents",
+      "presentDocsDesc": "Permis + CIN + email de réservation",
+      "giveCode": "Donnez le code",
+      "giveCodeDesc": "Code:",
+      "payDeposit": "Versez la caution",
+      "payDepositDesc": "5,000 MAD (remboursable)"
+    }
+  },
+  "info": {
+    "stepLabel": "Étape 1 sur 3",
+    "title": "Informations client",
+    "done": "33% terminé",
+    "personalDetails": "Coordonnées personnelles",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Ex: Mohammed Alami",
+    "phone": "Téléphone",
+    "license": "Numéro de permis",
+    "cin": "Numéro CIN",
+    "acceptPrivacy": "J'accepte que mes données soient utilisées pour le traitement de cette réservation conformément à la politique de confidentialité.",
+    "rentalDates": "Dates de location",
+    "pickup": "Prise en charge",
+    "return": "Restitution",
+    "deposit": "Caution",
+    "pickupAgency": "Agence de retrait",
+    "pickupAgencyPlace": "Aéroport Casablanca (CMN)"
+  },
+  "success": {
+    "title": "Réservation confirmée !",
+    "subtitle": "Votre réservation a été enregistrée avec succès.",
+    "reference": "Référence de réservation",
+    "keepReference": "Conservez cette référence",
+    "viewBookings": "Voir mes réservations",
+    "backHome": "Retour à l'accueil"
+  },
+  "summary": {
+    "stepLabel": "Étape 2 sur 3",
+    "done": "66% terminé",
+    "selectedVehicle": "Véhicule sélectionné",
+    "driverInfo": "Informations du conducteur",
+    "rentalConditions": "Conditions de location",
+    "acceptPrefix": "J'accepte les",
+    "saleTerms": "conditions générales de vente",
+    "and": "et la",
+    "costsTitle": "Résumé des coûts",
+    "pricePerDay": "Prix par jour",
+    "vat": "TVA (20%)",
+    "totalToPay": "Total à payer",
+    "dates": "Dates",
+    "place": "Lieu",
+    "placeValue": "Aéroport Mohammed V, Casablanca",
+    "editSearch": "Modifier la recherche",
+    "conditions": {
+      "deposit": "Caution de 5,000 MAD requise à la prise en charge (remboursée sous 48h)",
+      "driverAge": "Le conducteur doit avoir au moins 23 ans et 2 ans de permis",
+      "documents": "Présentation du permis de conduire et de la CIN obligatoire",
+      "freeCancellation": "Annulation gratuite jusqu'à 24h avant le départ"
+    }
+  },
+  "profile": {
+    "reservations": "Mes réservations",
+    "myProfile": "Mon profil",
+    "documents": "Mes documents",
+    "preferences": "Préférences",
+    "changePhoto": "Changer la photo",
+    "photoHint": "JPG, PNG. Max 2 Mo.",
+    "logout": "Déconnexion"
+  },
+  "documents": {
+    "license": "Permis de conduire",
+    "identityCard": "Carte d'identité",
+    "validUntil": "Valide jusqu'au",
+    "verified": "Vérifié"
+  },
+  "preferences": {
+    "notifications": "Notifications",
+    "confirmationEmails": "Emails de confirmation",
+    "rentalReminders": "Rappels de location",
+    "promotionalOffers": "Offres promotionnelles",
+    "languageRegion": "Langue et région",
+    "language": "Langue",
+    "currency": "Devise",
+    "save": "Enregistrer les préférences"
+  },
+  "reservations": {
+    "confirmed": "Confirmée",
+    "finished": "Terminée",
+    "reference": "Référence",
+    "invoice": "Facture",
+    "rentAgain": "Relouer"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "book": "Réserver",
+    "agencies": "Agences",
+    "reservations": "Mes Réservations",
+    "account": "Mon compte",
+    "clientArea": "Espace client",
+    "profile": "Profil"
+  },
+  "home": {
+    "title1": "Louez une voiture",
+    "title2": "en toute simplicité",
+    "subtitle": "Comparez les offres des meilleures agences au Maroc et réservez votre véhicule idéal en quelques clics.",
+    "city": "Ville",
+    "pickupDate": "Date de départ",
+    "returnDate": "Date de retour",
+    "search": "Rechercher",
+    "whyTitle": "Pourquoi choisir YanCarz ?",
+    "whySubtitle": "La location de voiture simplifiée avec les meilleures agences du Maroc",
+    "destinationsTitle": "Destinations populaires",
+    "destinationsSubtitle": "Louez une voiture dans les principales villes du Maroc",
+    "from": "À partir de",
+    "errors": {
+      "minReturnDate": "La date de retour doit être au moins 3 jours après la date de départ."
+    },
+    "features": {
+      "bestPrices": {
+        "title": "Meilleurs prix",
+        "desc": "Comparez les tarifs de multiples agences en temps réel"
+      },
+      "secureBooking": {
+        "title": "Réservation sécurisée",
+        "desc": "Paiement sécurisé et confirmation instantanée"
+      },
+      "freeCancellation": {
+        "title": "Annulation gratuite",
+        "desc": "Annulez gratuitement jusqu'à 24h avant le départ"
+      },
+      "support": {
+        "title": "Support 24/7",
+        "desc": "Assistance client disponible à tout moment"
+      }
+    }
+  },
+ "agencies": {
+    "title1": "Nos agences",
+    "title2": "partenaires",
+    "subtitle": "Découvrez notre réseau d'agences de confiance à travers le Maroc. Des professionnels sélectionnés pour vous offrir le meilleur service de location.",
+    "viewVehicles": "Voir véhicules",
+    "loading": "Chargement des agences...",
+    "empty": "Aucune agence trouvée.",
+    "unnamed": "Agence sans nom",
+    "reviews": "Avis client",
+    "emailUnavailable": "email non disponible",
+    "phoneUnavailable": "numéro non disponible",
+    "defaultAddress": "Maroc",
+    
+  "details": "Agence details"
+
+  },
+  "details": {
+    "back": "Retour aux résultats",
+    "mainFeatures": "Caractéristiques principales",
+    "highlights": "Points forts",
+    "summary": "Récapitulatif",
+    "city": "Ville",
+    "datesHours": "Dates & heures",
+    "from": "À partir de",
+    "estimatedTotal": "Total estimé",
+    "bookNow": "Réserver maintenant",
+    "securePayment": "Paiement sécurisé • Confirmation instantanée"
+  },
+  "login": {
+    "title": "Connexion",
+    "subtitle": "Accédez à votre compte",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "remember": "Se souvenir de moi",
+    "forgot": "Mot de passe oublié ?",
+    "submit": "Se connecter",
+    "orContinue": "Ou continuer avec",
+    "google": "Continuer avec Google",
+    "facebook": "Continuer avec Facebook",
+    "noAccount": "Pas encore de compte ?",
+    "createAccount": "Créer un compte",
+    "demo": "Mode démo : cliquez sur Se connecter"
+  },
+  "register": {
+    "title": "Créer un compte",
+    "subtitle": "Rejoignez YanCarz et gérez vos réservations facilement",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Adresse email",
+    "phone": "Téléphone",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "terms": "conditions générales",
+    "privacy": "politique de confidentialité",
+    "submit": "Créer mon compte",
+    "orContinue": "Ou continuer avec",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "login": "Se connecter",
+    "demo": "Mode démo : cliquez sur Créer mon compte"
+  },
+  "search": {
+    "filters": "Filtres",
+    "reset": "Réinitialiser",
+    "vehiclesAvailable": "véhicules disponibles",
+    "pricePerDay": "Prix par jour",
+    "transmission": "Transmission",
+    "automatic": "Automatique",
+    "manual": "Manuelle",
+    "fuel": "Carburant",
+    "category": "Catégorie",
+    "moreOptions": "Plus d'options",
+    "freeCancellation": "Annulation gratuite",
+    "vehiclesFound": "véhicules trouvés",
+    "sortBy": "Trier par",
+    "relevance": "Pertinence",
+    "priceLow": "Prix : Bas à Haut",
+    "priceHigh": "Prix : Haut à Bas",
+    "bestRating": "Meilleure Note",
+    "popular": "Populaire",
+    "from": "À partir de",
+    "total": "Total",
+    "viewDetails": "Voir détails"
+  },  "currency": {
+    "Day": "Jours",
+   
+    "mad":"MAD"
+  }
+}

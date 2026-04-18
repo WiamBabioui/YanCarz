@@ -1,0 +1,16 @@
+$kind: http-request
+name: /api/shared/Devise
+url: "{{baseUrl}}/api/shared/Devise"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "1f3af914-2703-b9ef-5200-5a1390591e39",
+      "code": "string",
+      "name": "string"
+    }
+examples: ./.resources/-api-shared-Devise 1.resources/examples
+order: 3000

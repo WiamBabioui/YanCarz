@@ -1,0 +1,10 @@
+$kind: http-request
+name: /api/shared/City/:id
+url: "{{baseUrl}}/api/shared/City/:id"
+method: GET
+headers:
+  Accept: text/plain
+pathVariables:
+  id: f566281a-ea23-a3b4-131c-3187fcd951bb
+examples: ./.resources/-api-shared-City-id.resources/examples
+order: 1000

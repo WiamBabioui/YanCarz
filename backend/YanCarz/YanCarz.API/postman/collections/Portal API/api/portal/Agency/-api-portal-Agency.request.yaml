@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/portal/Agency
+url: "{{baseUrl}}/api/portal/Agency"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-portal-Agency.resources/examples
+order: 2000

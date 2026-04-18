@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/agency/Agency"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "name": "string",
+        "eMail": "string",
+        "nbrPhone": "string",
+        "lastName": "string",
+        "firstMame": "string",
+        "address": "string",
+        "idCity": "965cec4f-d36c-6300-8f2d-e8829d7c0713"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

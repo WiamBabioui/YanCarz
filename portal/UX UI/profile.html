@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>YaanCarz - Mon Compte</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <script src="js/app.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+                <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+                    <a href="aceuil.html" class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+                        <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="aceuil.html">Accueil</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="resultsearch.html">Réserver</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="agences.html">Agences</a>
+                        <a class="text-sm font-medium text-primary" href="profile.html">Mes Réservations</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                            MA
+                        </div>
+                        <a href="login.html" class="flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 px-5 py-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                            Déconnexion
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex flex-1 justify-center py-8">
+                <div class="layout-content-container flex flex-col max-w-[1100px] flex-1 px-4 md:px-10">
+                    <!-- Page Header -->
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                        <div>
+                            <h1 class="text-3xl font-black text-slate-900 dark:text-white">Mon Compte</h1>
+                            <p class="text-slate-500 mt-1">Gérez vos réservations et informations personnelles</p>
+                        </div>
+                        <a href="resultsearch.html" class="px-6 py-3 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">add</span>
+                            Nouvelle réservation
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- Sidebar Navigation -->
+                        <aside class="lg:col-span-1">
+                            <div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden sticky top-24">
+                                <!-- User Info -->
+                                <div class="p-6 border-b border-slate-100 dark:border-slate-800">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
+                                            MA
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-slate-900 dark:text-white">Mohammed Alami</p>
+                                            <p class="text-sm text-slate-500">m.alami@email.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Navigation -->
+                                <nav class="p-2">
+                                    <button onclick="showTab('reservations')" id="tab-reservations" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-medium transition-colors">
+                                        <span class="material-symbols-outlined">calendar_month</span>
+                                        Mes réservations
+                                    </button>
+                                    <button onclick="showTab('profile')" id="tab-profile" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors mt-1">
+                                        <span class="material-symbols-outlined">person</span>
+                                        Mon profil
+                                    </button>
+                                    <button onclick="showTab('documents')" id="tab-documents" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors mt-1">
+                                        <span class="material-symbols-outlined">description</span>
+                                        Mes documents
+                                    </button>
+                                    <button onclick="showTab('preferences')" id="tab-preferences" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors mt-1">
+                                        <span class="material-symbols-outlined">settings</span>
+                                        Préférences
+                                    </button>
+                                </nav>
+                            </div>
+                        </aside>
+
+                        <!-- Main Content -->
+                        <div class="lg:col-span-3">
+                            <!-- Reservations Tab -->
+                            <div id="content-reservations" class="space-y-6">
+                                <h2 class="text-xl font-bold mb-4">Mes réservations</h2>
+
+                                <!-- Active Reservation -->
+                                <div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+                                    <div class="p-6">
+                                        <div class="flex flex-col md:flex-row gap-6">
+                                            <div class="w-full md:w-48 h-32 bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-5xl text-slate-400">directions_car</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                                                    <div>
+                                                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Range Rover Evoque</h3>
+                                                        <!-- Agency Badge -->
+                                                        <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1 mt-1 w-fit">
+                                                            <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/10a24b/ffffff/png?text=Y"/>
+                                                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">YAAN EXPRESS</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="inline-flex items-center gap-1 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg text-sm font-medium w-fit">
+                                                        <span class="material-symbols-outlined text-sm">check_circle</span>
+                                                        Confirmée
+                                                    </span>
+                                                </div>
+                                                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                                        <span class="material-symbols-outlined text-primary">calendar_today</span>
+                                                        <span>12 Mars 2026 à 09:00</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                                        <span class="material-symbols-outlined text-primary">event</span>
+                                                        <span>15 Mars 2026 à 18:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                                                    <div>
+                                                        <span class="text-xs text-slate-500">Référence</span>
+                                                        <p class="font-mono font-medium text-slate-900 dark:text-white">YAAN-34821</p>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-xs text-slate-500">Total</span>
+                                                        <p class="font-bold text-primary">2,154 MAD</p>
+                                                    </div>
+                                                    <div class="flex-1"></div>
+                                                    <div class="flex gap-2">
+                                                        <button class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                                            <span class="material-symbols-outlined align-middle text-sm mr-1">download</span>
+                                                            Facture
+                                                        </button>
+                                                        <button class="px-4 py-2 border border-red-200 dark:border-red-800 text-red-500 rounded-lg text-sm font-medium hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+                                                            <span class="material-symbols-outlined align-middle text-sm mr-1">close</span>
+                                                            Annuler
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Past Reservation -->
+                                <div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden opacity-75">
+                                    <div class="p-6">
+                                        <div class="flex flex-col md:flex-row gap-6">
+                                            <div class="w-full md:w-48 h-32 bg-gradient-to-br from-slate-300 to-slate-400 rounded-xl flex items-center justify-center grayscale">
+                                                <span class="material-symbols-outlined text-5xl text-slate-500">directions_car</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                                                    <div>
+                                                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Dacia Logan</h3>
+                                                        <!-- Agency Badge -->
+                                                        <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1 mt-1 w-fit">
+                                                            <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/2563eb/ffffff/png?text=B"/>
+                                                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">BUDGET MAROC</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="inline-flex items-center gap-1 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg text-sm font-medium w-fit">
+                                                        <span class="material-symbols-outlined text-sm">check</span>
+                                                        Terminée
+                                                    </span>
+                                                </div>
+                                                <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                                                    <div>
+                                                        <span class="text-xs text-slate-500">Référence</span>
+                                                        <p class="font-mono font-medium text-slate-700 dark:text-slate-300">YAAN-32451</p>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-xs text-slate-500">Total</span>
+                                                        <p class="font-medium text-slate-700 dark:text-slate-300">960 MAD</p>
+                                                    </div>
+                                                    <div class="flex-1"></div>
+                                                    <div class="flex gap-2">
+                                                        <button class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                                            <span class="material-symbols-outlined align-middle text-sm mr-1">download</span>
+                                                            Facture
+                                                        </button>
+                                                        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
+                                                            <span class="material-symbols-outlined align-middle text-sm mr-1">replay</span>
+                                                            Relouer
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Profile Tab (Hidden) -->
+                            <div id="content-profile" class="hidden space-y-6">
+                                <h2 class="text-xl font-bold mb-4">Mon profil</h2>
+                                <div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-6">
+                                    <form class="space-y-6">
+                                        <div class="flex items-center gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                                            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
+                                                MA
+                                            </div>
+                                            <div>
+                                                <button type="button" class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                                    Changer la photo
+                                                </button>
+                                                <p class="text-xs text-slate-500 mt-2">JPG, PNG. Max 2 Mo.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Prénom</label>
+                                                <input type="text" value="Mohammed" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"/>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nom</label>
+                                                <input type="text" value="Alami" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"/>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                                            <input type="email" value="m.alami@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"/>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Téléphone</label>
+                                            <input type="tel" value="+212 612-345678" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"/>
+                                        </div>
+
+                                        <div class="flex gap-4 pt-4">
+                                            <button type="button" class="px-6 py-3 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                                Annuler
+                                            </button>
+                                            <button type="submit" class="px-6 py-3 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors">
+                                                Enregistrer
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Documents Tab (Hidden) -->
+                            <div id="content-documents" class="hidden space-y-6">
+                                <h2 class="text-xl font-bold mb-4">Mes documents</h2>
+                                <div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-6">
+                                    <div class="space-y-4">
+                                        <div class="flex items-center justify-between p-4 border dark:border-slate-700 rounded-xl">
+                                            <div class="flex items-center gap-4">
+                                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                                    <span class="material-symbols-outlined text-primary">id_card</span>
+                                                </div>
+                                                <div>
+                                                    <h3 class="font-medium">Permis de conduire</h3>
+                                                    <p class="text-sm text-slate-500">N° 12/345678 · Valide jusqu'au 15/05/2028</p>
+                                                </div>
+                                            </div>
+                                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg text-sm">
+                                                <span class="material-symbols-outlined text-sm">check_circle</span>
+                                                Vérifié
+                                            </span>
+                                        </div>
+
+                                        <div class="flex items-center justify-between p-4 border dark:border-slate-700 rounded-xl">
+                                            <div class="flex items-center gap-4">
+                                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                                    <span class="material-symbols-outlined text-primary">badge</span>
+                                                </div>
+                                                <div>
+                                                    <h3 class="font-medium">Carte d'identité</h3>
+                                                    <p class="text-sm text-slate-500">N° AB123456</p>
+                                                </div>
+                                            </div>
+                                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg text-sm">
+                                                <span class="material-symbols-outlined text-sm">check_circle</span>
+                                                Vérifié
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Preferences Tab (Hidden) -->
+                            <div id="content-preferences" class="hidden space-y-6">
+                                <h2 class="text-xl font-bold mb-4">Préférences</h2>
+                                <div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-6">
+                                    <div class="space-y-6">
+                                        <div>
+                                            <h3 class="font-medium mb-4">Notifications</h3>
+                                            <div class="space-y-3">
+                                                <label class="flex items-center justify-between cursor-pointer">
+                                                    <span class="text-slate-700 dark:text-slate-300">Emails de confirmation</span>
+                                                    <input type="checkbox" checked class="rounded border-slate-300 text-primary focus:ring-primary"/>
+                                                </label>
+                                                <label class="flex items-center justify-between cursor-pointer">
+                                                    <span class="text-slate-700 dark:text-slate-300">Rappels de location</span>
+                                                    <input type="checkbox" checked class="rounded border-slate-300 text-primary focus:ring-primary"/>
+                                                </label>
+                                                <label class="flex items-center justify-between cursor-pointer">
+                                                    <span class="text-slate-700 dark:text-slate-300">Offres promotionnelles</span>
+                                                    <input type="checkbox" class="rounded border-slate-300 text-primary focus:ring-primary"/>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t border-slate-100 dark:border-slate-800 pt-6">
+                                            <h3 class="font-medium mb-4">Langue et région</h3>
+                                            <div class="space-y-4">
+                                                <div>
+                                                    <label class="block text-sm text-slate-500 mb-2">Langue</label>
+                                                    <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+                                                        <option value="fr" selected>Français</option>
+                                                        <option value="ar">العربية</option>
+                                                        <option value="en">English</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label class="block text-sm text-slate-500 mb-2">Devise</label>
+                                                    <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+                                                        <option value="mad" selected>MAD (Dirham marocain)</option>
+                                                        <option value="eur">EUR (Euro)</option>
+                                                        <option value="usd">USD (Dollar)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t border-slate-100 dark:border-slate-800 pt-6">
+                                            <button class="px-6 py-3 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors">
+                                                Enregistrer les préférences
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="col-span-2">
+                            <a href="aceuil.html" class="flex items-center gap-2 text-primary mb-6">
+                                <span class="material-symbols-outlined text-2xl">directions_car</span>
+                                <h2 class="text-lg font-bold text-slate-900 dark:text-white">YaanCarz</h2>
+                            </a>
+                            <p class="text-slate-500 max-w-xs text-sm">
+                                Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Liens rapides</h4>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li><a class="hover:text-primary transition-colors" href="aceuil.html">Accueil</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="resultsearch.html">Réserver</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="agences.html">Agences</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="profile.html">Mes Réservations</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Légal</h4>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li><a class="hover:text-primary transition-colors" href="#">À propos</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Conditions</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                        <p>© 2024 YaanCarz. Tous droits réservés.</p>
+                        <div class="flex gap-6">
+                            <a class="hover:text-slate-600" href="#">Facebook</a>
+                            <a class="hover:text-slate-600" href="#">Instagram</a>
+                            <a class="hover:text-slate-600" href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all content
+            document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('[id^="tab-"]').forEach(el => {
+                el.classList.remove('bg-primary/10', 'text-primary', 'font-medium');
+                el.classList.add('text-slate-600', 'dark:text-slate-400');
+            });
+
+            // Show selected content
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+            document.getElementById('tab-' + tabName).classList.add('bg-primary/10', 'text-primary', 'font-medium');
+            document.getElementById('tab-' + tabName).classList.remove('text-slate-600', 'dark:text-slate-400');
+        }
+    </script>
+</body>
+</html>

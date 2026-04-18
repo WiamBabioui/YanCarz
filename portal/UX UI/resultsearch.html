@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>YaanCarz - Résultats de recherche</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <script src="js/app.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen flex-col">
+        <!-- Top Navigation Bar -->
+        <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+            <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-8">
+                    <a href="aceuil.html" class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+                        <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+                    </a>
+                    <div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl px-4 py-2 border border-slate-200 dark:border-slate-700" data-search-summary>
+                        <span class="material-symbols-outlined text-slate-500 text-lg">location_on</span>
+                        <span class="ml-2 text-sm font-medium">Casablanca</span>
+                        <span class="mx-3 h-4 w-[1px] bg-slate-300 dark:bg-slate-600"></span>
+                        <span class="material-symbols-outlined text-slate-500 text-lg">calendar_month</span>
+                        <span class="ml-2 text-sm font-medium">12 – 15 Mar</span>
+                        <span class="mx-3 h-4 w-[1px] bg-slate-300 dark:bg-slate-600"></span>
+                        <a href="aceuil.html" class="text-sm font-medium text-primary hover:underline">Modifier</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <nav class="hidden lg:flex items-center gap-6">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="aceuil.html">Accueil</a>
+                        <a class="text-sm font-medium text-primary" href="resultsearch.html">Réserver</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="agences.html">Agences</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="profile.html">Mes Réservations</a>
+                    </nav>
+                    <a href="login.html" class="flex items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-all">
+                        Connexion
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="mx-auto flex w-full max-w-7xl flex-1 gap-8 px-4 py-8 sm:px-6 lg:px-8">
+            <!-- Sidebar Filters -->
+            <aside class="hidden w-64 flex-shrink-0 lg:block">
+                <div class="sticky top-24 space-y-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold">Filtres</h3>
+                            <button class="text-xs font-semibold text-primary">Réinitialiser</button>
+                        </div>
+                        <p class="mt-1 text-sm text-slate-500">24 véhicules disponibles</p>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-400">Prix par jour (MAD)</h4>
+                        <div class="px-2">
+                            <div class="relative h-1.5 w-full rounded-full bg-slate-200 dark:bg-slate-800">
+                                <div class="absolute inset-y-0 left-1/4 right-1/4 rounded-full bg-primary"></div>
+                                <div class="absolute top-1/2 left-1/4 h-4 w-4 -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full border-2 border-primary bg-white shadow-sm"></div>
+                                <div class="absolute top-1/2 left-3/4 h-4 w-4 -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full border-2 border-primary bg-white shadow-sm"></div>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between text-xs font-medium">
+                                <span>250 MAD</span>
+                                <span>1500 MAD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filter Groups -->
+                    <div class="space-y-6">
+                        <!-- Transmission -->
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Transmission</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+                                    <span class="text-sm group-hover:text-primary transition-colors">Automatique</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input checked class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+                                    <span class="text-sm group-hover:text-primary transition-colors">Manuelle</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Carburant -->
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Carburant</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input checked class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+                                    <span class="text-sm">Diesel</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+                                    <span class="text-sm">Essence</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+                                    <span class="text-sm">Hybride / Électrique</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Catégorie</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button class="flex flex-col items-center justify-center rounded-lg border border-slate-200 p-2 dark:border-slate-800 hover:border-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">directions_car</span>
+                                    <span class="text-[10px] mt-1">Citadine</span>
+                                </button>
+                                <button class="flex flex-col items-center justify-center rounded-lg border-2 border-primary bg-primary/5 p-2 dark:border-primary/50 transition-colors">
+                                    <span class="material-symbols-outlined text-xl text-primary">minor_crash</span>
+                                    <span class="text-[10px] mt-1 font-bold text-primary">SUV</span>
+                                </button>
+                                <button class="flex flex-col items-center justify-center rounded-lg border border-slate-200 p-2 dark:border-slate-800 hover:border-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">airport_shuttle</span>
+                                    <span class="text-[10px] mt-1">Utilitaire</span>
+                                </button>
+                                <button class="flex flex-col items-center justify-center rounded-lg border border-slate-200 p-2 dark:border-slate-800 hover:border-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">sports_motorsports</span>
+                                    <span class="text-[10px] mt-1">Luxe</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Options -->
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Plus d'options</h4>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <div class="relative inline-flex items-center cursor-pointer">
+                                    <input checked class="sr-only peer" type="checkbox" value=""/>
+                                    <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+                                </div>
+                                <span class="text-sm">Annulation gratuite</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="flex-1">
+                <!-- Search Result Header -->
+                <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <h1 class="text-2xl font-bold text-slate-900 dark:text-white" data-page-title>Casablanca : 24 véhicules trouvés</h1>
+                        <p class="text-slate-500" data-date-range>Du 12 au 15 Mars (3 jours)</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm font-medium text-slate-500">Trier par:</span>
+                        <div class="relative">
+                            <select id="sort-select" class="flex items-center gap-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-2 text-sm font-semibold shadow-sm appearance-none cursor-pointer">
+                                <option value="relevance">Pertinence</option>
+                                <option value="price-low">Prix : Bas à Haut</option>
+                                <option value="price-high">Prix : Haut à Bas</option>
+                                <option value="rating">Meilleure Note</option>
+                                <option value="popularity">Populaire</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid of Car Cards -->
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2" id="cars-container">
+                    <!-- Card 1: Dacia Duster -->
+                    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
+                        <div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+                            <div class="h-full w-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute top-3 right-3 rounded-full bg-white/90 dark:bg-slate-800/90 p-1.5 text-slate-400 hover:text-primary shadow-sm cursor-pointer">
+                                <span class="material-symbols-outlined text-lg leading-none">favorite</span>
+                            </div>
+                            <div class="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-[12px] fill-1 text-yellow-400">star</span>
+                                4.6 (128 avis)
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary">SUV</span>
+                                        <span class="h-1 w-1 rounded-full bg-slate-300"></span>
+                                        <span class="text-[10px] font-bold text-slate-400">Diesel</span>
+                                    </div>
+                                    <h3 class="mt-1 text-lg font-bold">Dacia Duster</h3>
+                                </div>
+                                <!-- Agency Badge -->
+                                <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1">
+                                    <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/10a24b/ffffff/png?text=Y"/>
+                                    <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">YaanExpress</span>
+                                </div>
+                            </div>
+                            <!-- Specs Icons -->
+                            <div class="mt-4 flex items-center gap-4 text-slate-500">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">group</span>
+                                    <span class="text-xs">5</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">settings</span>
+                                    <span class="text-xs">Manu.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">luggage</span>
+                                    <span class="text-xs">2</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">ac_unit</span>
+                                    <span class="text-xs">Oui</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-6">
+                                <div class="flex items-end justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+                                    <div>
+                                        <p class="text-[10px] font-medium text-slate-400">À partir de</p>
+                                        <p class="text-xl font-bold text-primary">450 MAD<span class="text-xs font-normal text-slate-400">/jour</span></p>
+                                        <p class="text-[11px] font-semibold text-slate-500">Total : 1,350 MAD</p>
+                                    </div>
+                                    <a href="cardetail.html?id=1&city=Casablanca&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="rounded-lg bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary/90 transition-colors">
+                                        Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Renault Clio -->
+                    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
+                        <div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+                            <div class="h-full w-full bg-gradient-to-br from-blue-300 to-blue-400 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute top-3 left-3 rounded-md bg-primary px-2 py-1 text-[10px] font-bold text-white shadow-sm">PROMO -15%</div>
+                            <div class="absolute top-3 right-3 rounded-full bg-white/90 dark:bg-slate-800/90 p-1.5 text-slate-400 hover:text-primary shadow-sm cursor-pointer">
+                                <span class="material-symbols-outlined text-lg leading-none">favorite</span>
+                            </div>
+                            <div class="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-[12px] fill-1 text-yellow-400">star</span>
+                                4.8 (85 avis)
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary">CITADINE</span>
+                                        <span class="h-1 w-1 rounded-full bg-slate-300"></span>
+                                        <span class="text-[10px] font-bold text-slate-400">Diesel</span>
+                                    </div>
+                                    <h3 class="mt-1 text-lg font-bold">Renault Clio 5</h3>
+                                </div>
+                                <!-- Agency Badge -->
+                                <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1">
+                                    <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/2563eb/ffffff/png?text=B"/>
+                                    <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Budget Maroc</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex items-center gap-4 text-slate-500">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">group</span>
+                                    <span class="text-xs">5</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">settings</span>
+                                    <span class="text-xs">Manu.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">luggage</span>
+                                    <span class="text-xs">1</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-primary">
+                                    <span class="material-symbols-outlined text-lg">verified</span>
+                                    <span class="text-[10px] font-bold">Annulation Gratuite</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-6">
+                                <div class="flex items-end justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+                                    <div>
+                                        <p class="text-[10px] font-medium text-slate-400 line-through">350 MAD</p>
+                                        <p class="text-xl font-bold text-primary">295 MAD<span class="text-xs font-normal text-slate-400">/jour</span></p>
+                                        <p class="text-[11px] font-semibold text-slate-500">Total : 885 MAD</p>
+                                    </div>
+                                    <a href="cardetail.html?id=2&city=Casablanca&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="rounded-lg bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary/90 transition-colors">
+                                        Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: VW Tiguan -->
+                    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
+                        <div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+                            <div class="h-full w-full bg-gradient-to-br from-gray-400 to-gray-500 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute top-3 right-3 rounded-full bg-white/90 dark:bg-slate-800/90 p-1.5 text-slate-400 hover:text-primary shadow-sm cursor-pointer">
+                                <span class="material-symbols-outlined text-lg leading-none">favorite</span>
+                            </div>
+                            <div class="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-[12px] fill-1 text-yellow-400">star</span>
+                                4.9 (42 avis)
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary">PREMIUM SUV</span>
+                                        <span class="h-1 w-1 rounded-full bg-slate-300"></span>
+                                        <span class="text-[10px] font-bold text-slate-400">Diesel</span>
+                                    </div>
+                                    <h3 class="mt-1 text-lg font-bold">VW Tiguan R-Line</h3>
+                                </div>
+                                <!-- Agency Badge -->
+                                <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1">
+                                    <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/dc2626/ffffff/png?text=H"/>
+                                    <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Hertz Morocco</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex items-center gap-4 text-slate-500">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">group</span>
+                                    <span class="text-xs">5</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-primary">
+                                    <span class="material-symbols-outlined text-lg">settings_input_component</span>
+                                    <span class="text-xs font-bold">Auto.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">luggage</span>
+                                    <span class="text-xs">3</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">no_food</span>
+                                    <span class="text-xs">Hybride</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-6">
+                                <div class="flex items-end justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+                                    <div>
+                                        <p class="text-[10px] font-medium text-slate-400">À partir de</p>
+                                        <p class="text-xl font-bold text-primary">850 MAD<span class="text-xs font-normal text-slate-400">/jour</span></p>
+                                        <p class="text-[11px] font-semibold text-slate-500">Total : 2,550 MAD</p>
+                                    </div>
+                                    <a href="cardetail.html?id=3&city=Casablanca&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="rounded-lg bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary/90 transition-colors">
+                                        Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Hyundai i10 -->
+                    <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
+                        <div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+                            <div class="h-full w-full bg-gradient-to-br from-red-300 to-pink-400 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute top-3 right-3 rounded-full bg-white/90 dark:bg-slate-800/90 p-1.5 text-slate-400 hover:text-primary shadow-sm cursor-pointer">
+                                <span class="material-symbols-outlined text-lg leading-none">favorite</span>
+                            </div>
+                            <div class="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-white backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-[12px] fill-1 text-yellow-400">star</span>
+                                4.5 (210 avis)
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary">CITADINE</span>
+                                        <span class="h-1 w-1 rounded-full bg-slate-300"></span>
+                                        <span class="text-[10px] font-bold text-slate-400">Essence</span>
+                                    </div>
+                                    <h3 class="mt-1 text-lg font-bold">Hyundai i10</h3>
+                                </div>
+                                <!-- Agency Badge -->
+                                <div class="flex items-center gap-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 px-2 py-1">
+                                    <img alt="Agency Logo" class="h-4 w-4 rounded-sm" src="https://placehold.co/32x32/f59e0b/ffffff/png?text=R"/>
+                                    <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Roc-a-Car</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex items-center gap-4 text-slate-500">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">group</span>
+                                    <span class="text-xs">4</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">settings</span>
+                                    <span class="text-xs">Manu.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">luggage</span>
+                                    <span class="text-xs">1</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">ac_unit</span>
+                                    <span class="text-xs">Oui</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-6">
+                                <div class="flex items-end justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+                                    <div>
+                                        <p class="text-[10px] font-medium text-slate-400">À partir de</p>
+                                        <p class="text-xl font-bold text-primary">250 MAD<span class="text-xs font-normal text-slate-400">/jour</span></p>
+                                        <p class="text-[11px] font-semibold text-slate-500">Total : 750 MAD</p>
+                                    </div>
+                                    <a href="cardetail.html?id=4&city=Casablanca&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="rounded-lg bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary/90 transition-colors">
+                                        Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-12 flex items-center justify-center gap-2">
+                    <button class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white hover:border-primary transition-all">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary font-bold text-white">1</button>
+                    <button class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white hover:border-primary transition-all">2</button>
+                    <button class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white hover:border-primary transition-all">3</button>
+                    <span class="px-2">...</span>
+                    <button class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white hover:border-primary transition-all">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="col-span-2">
+                        <a href="aceuil.html" class="flex items-center gap-2 text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl">directions_car</span>
+                            <h2 class="text-lg font-bold text-slate-900 dark:text-white">YaanCarz</h2>
+                        </a>
+                        <p class="text-slate-500 max-w-xs text-sm">
+                            Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Liens rapides</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="aceuil.html">Accueil</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="resultsearch.html">Réserver</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="agences.html">Agences</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="profile.html">Mes Réservations</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Légal</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="#">À propos</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                    <p>© 2024 YaanCarz. Tous droits réservés.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-slate-600" href="#">Facebook</a>
+                        <a class="hover:text-slate-600" href="#">Instagram</a>
+                        <a class="hover:text-slate-600" href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

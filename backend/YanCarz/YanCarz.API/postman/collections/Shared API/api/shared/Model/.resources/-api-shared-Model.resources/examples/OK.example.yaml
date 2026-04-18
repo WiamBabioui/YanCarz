@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/Model"
+  method: GET
+  headers:
+    Accept: text/plain
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "96c588e6-967d-5ced-a155-293c7075c36d",
+          "name": "string",
+          "typeModel": "string",
+          "markId": "2e854230-1882-6114-68a5-3a478a642209",
+          "markName": "string"
+        },
+        {
+          "id": "a9e438c5-1d69-1aca-2f55-1b01c29be637",
+          "name": "string",
+          "typeModel": "string",
+          "markId": "21a83b0f-8d35-dbbd-ed5b-6ef428ba69ec",
+          "markName": "string"
+        }
+      ]
+order: 1000

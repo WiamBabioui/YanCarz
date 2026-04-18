@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/Model/:id"
+  method: GET
+  headers:
+    Accept: text/plain
+  pathVariables:
+    id: f566281a-ea23-a3b4-131c-3187fcd951bb
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "25821910-85c0-735d-7a5d-b4ce9adf60a5",
+        "name": "string",
+        "typeModel": "string",
+        "markId": "b345bbd0-ec2b-2c7f-83ea-8a6af9c2aa78",
+        "markName": "string"
+      }
+order: 1000

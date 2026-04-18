@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Booking"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "lastName": "string",
+        "firstName": "string",
+        "nbrPhone": "string",
+        "eMail": "string",
+        "agencyCarId": "94df1ead-361d-d4be-754e-04108e85bd6f",
+        "startDate": "1952-06-04T02:16:03.984Z",
+        "endDate": "2026-01-26T16:05:49.503Z",
+        "pickupPlaceId": "fd966752-d188-7405-e243-3d15051e303e",
+        "returnPlaceId": "54e0c170-cb41-8d1c-537d-f2f1f32f15a5",
+        "pricePerDay": 2184.4256351055756,
+        "deviseId": "8f13ced4-8481-69b8-ca7e-d620ffe7d89b"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

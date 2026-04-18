@@ -1,0 +1,133 @@
+{
+	"id": "26e67540-8948-4c4c-8c60-f5f24a3dc67e",
+	"name": "Portal API",
+	"timestamp": "2026-03-16T09:33:21.856Z",
+	"collection_id": "53116231-e22954d8-3b22-47b9-bfd7-d6b32711299f",
+	"folder_id": 0,
+	"environment_id": "53116231-b2d176ef-7717-48d0-a75c-382c5aa925d6",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-16T09:33:18.597Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "fa7c6fc6-88f2-4a04-b232-35d6f8558e7f",
+			"name": "/api/portal/Agency/:id",
+			"url": "https://yancarz-be.azurewebsites.net/api/portal/Agency/c8713141-38c7-03bd-bc7a-4bfa6be7e995",
+			"time": 237,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": false,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				237
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": false,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "2bef1acf-68e5-4e89-990d-a2dc375985f9",
+			"name": "/api/portal/Agency",
+			"url": "https://yancarz-be.azurewebsites.net/api/portal/Agency",
+			"time": 442,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				442
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "920676da-612c-4069-8ce0-d417a813586c",
+			"name": "/api/portal/ResearchRequest/agency",
+			"url": "https://yancarz-be.azurewebsites.net/api/portal/ResearchRequest/agency?DepartureDate=1973-02-03T23:05:18.744Z&ReturnDate=1973-02-03T23:05:18.744Z&PickupLocationId=c8713141-38c7-03bd-bc7a-4bfa6be7e995&DropOffLocationId=c8713141-38c7-03bd-bc7a-4bfa6be7e995&AgencyIds=f5eef45b-2158-ae3d-cd4e-a697e5238c51&AgencyIds=6cd799f5-a5c0-7894-8031-a0e7254f42c2&ModelIds=f5eef45b-2158-ae3d-cd4e-a697e5238c51&ModelIds=6cd799f5-a5c0-7894-8031-a0e7254f42c2&TypeModels=1&TypeModels=1&FuelType=4&MinPricePerDay=8878.193637563108&MaxPricePerDay=8878.193637563108&NbrSeats=8339&MinYear=8339&MaxYear=8339&Page=8339&PageSize=8339",
+			"time": 538,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Succès : Code 200 ou 201": true,
+				"Performance : Moins de 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Succès : Code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Performance : Moins de 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				538
+			],
+			"allTests": [
+				{
+					"Succès : Code 200 ou 201": true,
+					"Performance : Moins de 1000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1217,
+	"collection": {
+		"requests": [
+			{
+				"id": "fa7c6fc6-88f2-4a04-b232-35d6f8558e7f",
+				"method": "GET"
+			},
+			{
+				"id": "2bef1acf-68e5-4e89-990d-a2dc375985f9",
+				"method": "GET"
+			},
+			{
+				"id": "920676da-612c-4069-8ce0-d417a813586c",
+				"method": "GET"
+			}
+		]
+	}
+}

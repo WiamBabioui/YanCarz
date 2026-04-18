@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/Place"
+  method: GET
+  headers:
+    Accept: text/plain
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "b4b4c30e-c9e2-2a39-bc3c-ee22fe751a2e",
+          "name": "string",
+          "countryId": "785f92d2-20f1-41c7-f517-c0f9ead1250f"
+        },
+        {
+          "id": "b715f50a-0374-6093-f84c-b74fad9e3b9f",
+          "name": "string",
+          "countryId": "3ad126da-5fdb-2c6a-b730-8f6f7feeef2f"
+        }
+      ]
+order: 1000

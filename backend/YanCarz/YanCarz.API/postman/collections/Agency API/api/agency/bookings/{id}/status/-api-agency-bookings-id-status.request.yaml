@@ -1,0 +1,16 @@
+$kind: http-request
+name: /api/agency/bookings/:id/status
+url: "{{baseUrl}}/api/agency/bookings/:id/status"
+method: PATCH
+headers:
+  Content-Type: application/json
+pathVariables:
+  id: 60626033-da0a-44c5-6cf5-e81ee0c0baa0
+body:
+  type: json
+  content: |-
+    {
+      "status": 1
+    }
+examples: ./.resources/-api-agency-bookings-id-status.resources/examples
+order: 1000

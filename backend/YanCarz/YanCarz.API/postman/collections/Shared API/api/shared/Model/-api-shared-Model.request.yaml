@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/Model
+url: "{{baseUrl}}/api/shared/Model"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-shared-Model.resources/examples
+order: 2000

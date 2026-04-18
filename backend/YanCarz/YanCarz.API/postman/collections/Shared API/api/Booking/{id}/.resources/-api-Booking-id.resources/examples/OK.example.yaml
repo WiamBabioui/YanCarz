@@ -1,0 +1,13 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Booking/:id"
+  method: GET
+  pathVariables:
+    id: f566281a-ea23-a3b4-131c-3187fcd951bb
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

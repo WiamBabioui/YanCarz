@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/City"
+  method: GET
+  headers:
+    Accept: text/plain
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "b85171f1-ca28-9a7f-349d-e506580acae5",
+          "name": "string",
+          "countryName": "string",
+          "countryId": "541983a2-afab-61da-d61b-df5110bb3690"
+        },
+        {
+          "id": "ac53b1c9-003c-6c57-ff31-b6294f14597c",
+          "name": "string",
+          "countryName": "string",
+          "countryId": "4bcbd968-20ec-3fc1-9340-e2ec2a6bc8ad"
+        }
+      ]
+order: 1000

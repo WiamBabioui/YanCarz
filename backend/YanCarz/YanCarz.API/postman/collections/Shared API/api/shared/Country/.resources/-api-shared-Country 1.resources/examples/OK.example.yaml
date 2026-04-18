@@ -1,0 +1,16 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/Country"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: string
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

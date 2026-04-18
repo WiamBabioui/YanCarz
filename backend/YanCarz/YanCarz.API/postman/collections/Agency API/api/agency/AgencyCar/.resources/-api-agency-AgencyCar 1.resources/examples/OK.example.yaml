@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/agency/AgencyCar"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "year": 911,
+        "modelId": "1ecc723a-7d85-b319-df43-df9bb8ed03a6",
+        "plateNumber": "string",
+        "color": "string",
+        "fuelType": 2,
+        "seats": 4386,
+        "pricePerDay": 3959.5968909402245,
+        "agencyId": "fc8133b7-99e2-aaee-1181-f4c71b9bf08e",
+        "status": 0,
+        "mileage": 5586,
+        "category": 5
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

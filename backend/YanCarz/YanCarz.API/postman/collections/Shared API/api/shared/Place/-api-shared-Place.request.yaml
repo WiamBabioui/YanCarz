@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/shared/Place
+url: "{{baseUrl}}/api/shared/Place"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-shared-Place.resources/examples
+order: 2000

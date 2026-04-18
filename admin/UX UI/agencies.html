@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencies - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div>
+                    <div class="logo-text">YanCarz</div>
+                    <div class="logo-subtext">Pro</div>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="menu-section-title">Main</li>
+                <li class="menu-item">
+                    <a href="dashboard.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Management</li>
+                <li class="menu-item">
+                    <a href="agencies.html" class="menu-link active">
+                        <i class="fas fa-building"></i>
+                        <span>Agencies</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span>Users</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Insights</li>
+                <li class="menu-item">
+                    <a href="analytics.html" class="menu-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+
+                <li class="menu-section-title">Preferences</li>
+                <li class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="menu-item" style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+                    <a href="#" class="menu-link" onclick="handleLogout(event)">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <button class="toggle-sidebar-btn" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search agencies...">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <button class="icon-btn with-notification">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                    <div class="user-profile">
+                        <div class="avatar">AD</div>
+                        <div class="user-info">
+                            <div class="user-name">Admin</div>
+                            <div class="user-role">Administrator</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div class="page-header">
+                    <h1>Agencies Management</h1>
+                    <p>Manage all registered agencies on your platform</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>All Agencies</h2>
+                        <button class="btn btn-primary" onclick="openAgencyModal()">
+                            <i class="fas fa-plus"></i> Add Agency
+                        </button>
+                    </div>
+
+                    <div class="search-filter">
+                        <input type="text" placeholder="Search by name or owner..." id="agencySearch" onkeyup="filterAgencies()">
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Agency Name</th>
+                                    <th>Owner</th>
+                                    <th>Email</th>
+                                    <th>Bookings</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="agenciesTable">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="agencyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Agency</h2>
+                <button class="modal-close" onclick="closeAgencyModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleAddAgency(event)">
+                <div class="form-group">
+                    <label for="agencyName">Agency Name</label>
+                    <input type="text" id="agencyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="agencyOwner">Owner Name</label>
+                    <input type="text" id="agencyOwner" required>
+                </div>
+                <div class="form-group">
+                    <label for="agencyEmail">Email</label>
+                    <input type="email" id="agencyEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="agencyPhone">Phone</label>
+                    <input type="tel" id="agencyPhone" required>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary" onclick="closeAgencyModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Agency</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check authentication
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+
+        const agencies = [
+            { id: 1, name: 'Alpha Travel Co', owner: 'John Doe', email: 'john@alpha.com', bookings: 245, status: 'active' },
+            { id: 2, name: 'Beta Tours', owner: 'Jane Smith', email: 'jane@beta.com', bookings: 189, status: 'active' },
+            { id: 3, name: 'Gamma Expeditions', owner: 'Mike Johnson', email: 'mike@gamma.com', bookings: 156, status: 'suspended' },
+            { id: 4, name: 'Delta Adventures', owner: 'Sarah Williams', email: 'sarah@delta.com', bookings: 234, status: 'active' },
+            { id: 5, name: 'Epsilon Journeys', owner: 'Tom Brown', email: 'tom@epsilon.com', bookings: 167, status: 'active' },
+        ];
+
+        let currentEditId = null;
+
+        function renderAgencies(data = agencies) {
+            const table = document.getElementById('agenciesTable');
+            table.innerHTML = data.map(agency => `
+                <tr>
+                    <td><strong>${agency.name}</strong></td>
+                    <td>${agency.owner}</td>
+                    <td>${agency.email}</td>
+                    <td>${agency.bookings}</td>
+                    <td>
+                        <span class="badge badge-${agency.status === 'active' ? 'success' : 'danger'}">
+                            ${agency.status}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary btn-sm" onclick="editAgency(${agency.id})">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteAgency(${agency.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function filterAgencies() {
+            const searchTerm = document.getElementById('agencySearch').value.toLowerCase();
+            const filtered = agencies.filter(agency =>
+                agency.name.toLowerCase().includes(searchTerm) ||
+                agency.owner.toLowerCase().includes(searchTerm)
+            );
+            renderAgencies(filtered);
+        }
+
+        function openAgencyModal() {
+            currentEditId = null;
+            document.getElementById('agencyName').value = '';
+            document.getElementById('agencyOwner').value = '';
+            document.getElementById('agencyEmail').value = '';
+            document.getElementById('agencyPhone').value = '';
+            document.getElementById('agencyModal').classList.add('active');
+        }
+
+        function closeAgencyModal() {
+            document.getElementById('agencyModal').classList.remove('active');
+        }
+
+        function handleAddAgency(event) {
+            event.preventDefault();
+            const name = document.getElementById('agencyName').value;
+            const owner = document.getElementById('agencyOwner').value;
+            const email = document.getElementById('agencyEmail').value;
+
+            if (currentEditId) {
+                const agency = agencies.find(a => a.id === currentEditId);
+                if (agency) {
+                    agency.name = name;
+                    agency.owner = owner;
+                    agency.email = email;
+                }
+            } else {
+                agencies.push({
+                    id: Math.max(...agencies.map(a => a.id)) + 1,
+                    name,
+                    owner,
+                    email,
+                    bookings: 0,
+                    status: 'active'
+                });
+            }
+
+            renderAgencies();
+            closeAgencyModal();
+        }
+
+        function editAgency(id) {
+            const agency = agencies.find(a => a.id === id);
+            if (agency) {
+                currentEditId = id;
+                document.getElementById('agencyName').value = agency.name;
+                document.getElementById('agencyOwner').value = agency.owner;
+                document.getElementById('agencyEmail').value = agency.email;
+                document.getElementById('agencyModal').classList.add('active');
+            }
+        }
+
+        function deleteAgency(id) {
+            if (confirm('Are you sure you want to delete this agency?')) {
+                const index = agencies.findIndex(a => a.id === id);
+                if (index > -1) {
+                    agencies.splice(index, 1);
+                    renderAgencies();
+                }
+            }
+        }
+
+        // Initialize
+        renderAgencies();
+    </script>
+</body>
+</html>

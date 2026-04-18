@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>YaanCarz - Location de voitures au Maroc</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <script src="js/app.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen flex-col">
+        <!-- Top Navigation Bar -->
+        <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+            <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+                <a href="aceuil.html" class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium text-primary" href="aceuil.html">Accueil</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="resultsearch.html">Réserver</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="agences.html">Agences</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="profile.html">Mes Réservations</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="login.html" class="flex items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-all">
+                        Connexion
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="flex-1">
+            <div class="relative bg-gradient-to-br from-primary/10 via-background-light to-primary/5 dark:from-primary/5 dark:via-background-dark dark:to-primary/10 py-16 lg:py-24">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <h1 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
+                            Louez une voiture <span class="text-primary">en toute simplicité</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400">
+                            Comparez les offres des meilleures agences au Maroc et réservez votre véhicule idéal en quelques clics.
+                        </p>
+                    </div>
+
+                    <!-- Search Form with Hours -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-6 lg:p-8 max-w-5xl mx-auto">
+                        <form data-search-form action="resultsearch.html" method="GET" class="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-4">
+                            <!-- City -->
+                            <div class="lg:col-span-3">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-lg align-text-bottom">location_on</span> Ville
+                                </label>
+                                <select name="city" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                                    <option value="Casablanca" selected>Casablanca</option>
+                                    <option value="Rabat">Rabat</option>
+                                    <option value="Marrakech">Marrakech</option>
+                                    <option value="Agadir">Agadir</option>
+                                    <option value="Tanger">Tanger</option>
+                                    <option value="Fès">Fès</option>
+                                </select>
+                            </div>
+
+                            <!-- Pickup Date & Time -->
+                            <div class="lg:col-span-3">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-lg align-text-bottom">calendar_today</span> Date de départ
+                                </label>
+                                <div class="flex gap-2">
+                                    <input type="date" name="from" value="2026-03-12" class="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"/>
+                                    <select name="fromTime" class="w-24 px-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm">
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00" selected>09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Return Date & Time -->
+                            <div class="lg:col-span-3">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-lg align-text-bottom">event</span> Date de retour
+                                </label>
+                                <div class="flex gap-2">
+                                    <input type="date" name="to" value="2026-03-15" class="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"/>
+                                    <select name="toTime" class="w-24 px-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm">
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00" selected>18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Search Button -->
+                            <div class="lg:col-span-3 flex items-end">
+                                <button type="submit" class="w-full px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                                    <span class="material-symbols-outlined">search</span>
+                                    <span>Rechercher</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="py-16 bg-white dark:bg-slate-900">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Pourquoi choisir YaanCarz ?</h2>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">La location de voiture simplifiée avec les meilleures agences du Maroc</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-shadow">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">payments</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">Meilleurs prix</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Comparez les tarifs de multiples agences en temps réel</p>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-shadow">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">security</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">Réservation sécurisée</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Paiement sécurisé et confirmation instantanée</p>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-shadow">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">event_busy</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">Annulation gratuite</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Annulez gratuitement jusqu'à 24h avant le départ</p>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-shadow">
+                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">headset_mic</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white mb-2">Support 24/7</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Assistance client disponible à tout moment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Destinations -->
+            <div class="py-16 bg-background-light dark:bg-background-dark">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Destinations populaires</h2>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Louez une voiture dans les principales villes du Maroc</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="resultsearch.html?city=Casablanca&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                            <div class="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">Casablanca</h3>
+                                <p class="text-sm text-slate-200">À partir de 250 MAD/jour</p>
+                            </div>
+                        </a>
+                        <a href="resultsearch.html?city=Marrakech&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                            <div class="w-full h-full bg-gradient-to-br from-orange-300 to-red-400 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">Marrakech</h3>
+                                <p class="text-sm text-slate-200">À partir de 280 MAD/jour</p>
+                            </div>
+                        </a>
+                        <a href="resultsearch.html?city=Agadir&from=2026-03-12&fromTime=09:00&to=2026-03-15&toTime=18:00" class="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                            <div class="w-full h-full bg-gradient-to-br from-blue-300 to-cyan-400 group-hover:scale-105 transition-transform duration-500"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">Agadir</h3>
+                                <p class="text-sm text-slate-200">À partir de 220 MAD/jour</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="col-span-2">
+                        <a href="aceuil.html" class="flex items-center gap-2 text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl">directions_car</span>
+                            <h2 class="text-lg font-bold text-slate-900 dark:text-white">YaanCarz</h2>
+                        </a>
+                        <p class="text-slate-500 max-w-xs text-sm">
+                            Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Liens rapides</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="aceuil.html">Accueil</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="resultsearch.html">Réserver</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="agences.html">Agences</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="profile.html">Mes Réservations</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Légal</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="#">À propos</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                    <p>© 2024 YaanCarz. Tous droits réservés.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-slate-600" href="#">Facebook</a>
+                        <a class="hover:text-slate-600" href="#">Instagram</a>
+                        <a class="hover:text-slate-600" href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

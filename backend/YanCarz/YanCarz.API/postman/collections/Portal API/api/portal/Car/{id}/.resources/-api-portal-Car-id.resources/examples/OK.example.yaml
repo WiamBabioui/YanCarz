@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/portal/Car/:id"
+  method: GET
+  headers:
+    Accept: text/plain
+  pathVariables:
+    id: eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "d63131c5-4e0f-6229-270c-1b1568d95bc3",
+        "year": 9431,
+        "modelId": "00634360-64e3-ab43-0a71-d32f189edbb9",
+        "modelName": "string",
+        "markName": "string",
+        "plateNumber": "string",
+        "color": "string",
+        "fuelType": 4,
+        "seats": 9521,
+        "pricePerDay": 9054.230656598053,
+        "agencyId": "8adeafa8-bc8c-a589-66a7-9c575f663661",
+        "agencyName": "string",
+        "status": 2,
+        "mileage": 2218,
+        "category": 4
+      }
+order: 1000

@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/admin/customers/:id
+url: "{{baseUrl}}/api/admin/customers/:id"
+method: GET
+pathVariables:
+  id: 9d24f0e5-eaf5-a759-3bee-bfe1d1d49e0a
+examples: ./.resources/-api-admin-customers-id.resources/examples
+order: 1000

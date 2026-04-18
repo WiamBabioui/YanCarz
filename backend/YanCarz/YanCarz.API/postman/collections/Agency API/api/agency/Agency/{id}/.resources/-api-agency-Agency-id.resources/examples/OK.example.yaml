@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/agency/Agency/:id"
+  method: GET
+  headers:
+    Accept: text/plain
+  pathVariables:
+    id: 60626033-da0a-44c5-6cf5-e81ee0c0baa0
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "3d3423c5-47a7-157a-9cfe-bc478b574835",
+        "name": "string",
+        "eMail": "string",
+        "nbrPhone": "string",
+        "address": "string"
+      }
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+name: /api/agency/AgencyCar/:id
+url: "{{baseUrl}}/api/agency/AgencyCar/:id"
+method: GET
+headers:
+  Accept: text/plain
+pathVariables:
+  id: 60626033-da0a-44c5-6cf5-e81ee0c0baa0
+examples: ./.resources/-api-agency-AgencyCar-id.resources/examples
+order: 1000

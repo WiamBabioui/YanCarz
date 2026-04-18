@@ -1,0 +1,51 @@
+{
+	"id": "69b81d648962558cd629502c",
+	"name": "Admin API",
+	"timestamp": "2026-03-16T15:10:43.091Z",
+	"collection_id": "aA065F4A6CcDBB86BEA84C7c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 13,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-16T15:10:28.152Z",
+	"totalFail": 7,
+	"results": [],
+	"count": 1,
+	"totalTime": 0,
+	"collection": {
+		"requests": [
+			{
+				"id": "ccD5E2bfFCcaFc021FEAa544"
+			},
+			{
+				"id": "3d6ee9036c3C41c11e44Ad68"
+			},
+			{
+				"id": "909af41544B61DfE5eDF0901"
+			},
+			{
+				"id": "CBA2d71683f2f7F8bc07712b"
+			},
+			{
+				"id": "dd9770cAD90F547Ce5fA6D4A"
+			},
+			{
+				"id": "bAAc8DAD3CdFB1D6F30796Ed"
+			},
+			{
+				"id": "F0D5aC560E96EBe9A9A1F76C"
+			},
+			{
+				"id": "444A7A6f76e7d8fBEb59b00F"
+			},
+			{
+				"id": "bDa8Cbe34c134a9A4Ed3D8ce"
+			},
+			{
+				"id": "FF966BB32b730fc9c0EDEeCa"
+			}
+		]
+	}
+}

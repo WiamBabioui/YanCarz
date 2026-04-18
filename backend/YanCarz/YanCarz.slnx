@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="YanCarz.API/YanCarz.API.csproj" />
+  <Project Path="YanCarz.Application/YanCarz.Application.csproj" />
+  <Project Path="YanCarz.Domain/YanCarz.Domain.csproj" />
+  <Project Path="YanCarz.Infrastructure/YanCarz.Infrastructure.csproj" />
+  <Project Path="YanCarz.Tests/YanCarz.Tests.csproj" />
+</Solution>

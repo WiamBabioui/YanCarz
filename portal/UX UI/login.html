@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>YaanCarz - Connexion</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <script src="js/app.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+                <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+                    <a href="aceuil.html" class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+                        <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="aceuil.html">Accueil</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="resultsearch.html">Réserver</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="agences.html">Agences</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="profile.html">Mes Réservations</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a href="aceuil.html" class="flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 px-5 py-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                            Accueil
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex flex-1 justify-center py-16">
+                <div class="layout-content-container flex flex-col max-w-[400px] flex-1 px-4 md:px-10">
+                    <!-- Login Form -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-800">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-primary text-3xl">person</span>
+                            </div>
+                            <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Connexion</h1>
+                            <p class="text-slate-500 mt-2">Accédez à votre compte YaanCarz</p>
+                        </div>
+
+                        <form action="profile.html" method="GET" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Adresse email</label>
+                                <div class="relative">
+                                    <span class="absolute left-3 top-3 text-slate-400">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </span>
+                                    <input type="email" required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="votre@email.com"/>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Mot de passe</label>
+                                <div class="relative">
+                                    <span class="absolute left-3 top-3 text-slate-400">
+                                        <span class="material-symbols-outlined">lock</span>
+                                    </span>
+                                    <input type="password" required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="••••••••"/>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" class="rounded border-slate-300 text-primary focus:ring-primary"/>
+                                    <span class="text-sm text-slate-600 dark:text-slate-400">Se souvenir de moi</span>
+                                </label>
+                                <a href="#" class="text-sm text-primary hover:underline">Mot de passe oublié ?</a>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold transition-all shadow-lg shadow-primary/20">
+                                Se connecter
+                            </button>
+                        </form>
+
+                        <div class="relative my-8">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+                            </div>
+                            <div class="relative flex justify-center">
+                                <span class="px-4 bg-white dark:bg-slate-900 text-sm text-slate-500">Ou</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <button class="w-full py-3 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center justify-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5"/>
+                                <span class="text-slate-700 dark:text-slate-300 font-medium">Continuer avec Google</span>
+                            </button>
+                            <button class="w-full py-3 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center justify-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-blue-600">facebook</span>
+                                <span class="text-slate-700 dark:text-slate-300 font-medium">Continuer avec Facebook</span>
+                            </button>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <p class="text-slate-600 dark:text-slate-400">
+                                Pas encore de compte ?
+                                <a href="#" class="text-primary hover:underline font-medium">Créer un compte</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Demo Note -->
+                    <div class="mt-6 text-center">
+                        <p class="text-sm text-slate-500">
+                            <span class="material-symbols-outlined align-middle text-sm mr-1">info</span>
+                            Mode démo : cliquez sur "Se connecter" pour accéder au profil
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="col-span-2">
+                            <a href="aceuil.html" class="flex items-center gap-2 text-primary mb-6">
+                                <span class="material-symbols-outlined text-2xl">directions_car</span>
+                                <h2 class="text-lg font-bold text-slate-900 dark:text-white">YaanCarz</h2>
+                            </a>
+                            <p class="text-slate-500 max-w-xs text-sm">
+                                Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Liens rapides</h4>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li><a class="hover:text-primary transition-colors" href="aceuil.html">Accueil</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="resultsearch.html">Réserver</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="agences.html">Agences</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="profile.html">Mes Réservations</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Légal</h4>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li><a class="hover:text-primary transition-colors" href="#">À propos</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Conditions</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                        <p>© 2024 YaanCarz. Tous droits réservés.</p>
+                        <div class="flex gap-6">
+                            <a class="hover:text-slate-600" href="#">Facebook</a>
+                            <a class="hover:text-slate-600" href="#">Instagram</a>
+                            <a class="hover:text-slate-600" href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

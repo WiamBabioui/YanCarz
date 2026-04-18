@@ -1,0 +1,22 @@
+$kind: http-request
+name: /api/agency/bookings
+url: "{{baseUrl}}/api/agency/bookings"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "customerId": "ac879172-575c-53b1-9ece-424296656ca7",
+      "agencyCarId": "a6bd55c3-0088-b60b-3b5c-994d7010b050",
+      "agencyId": "7b002c6c-4f04-8222-0dec-604f77c8f509",
+      "startDate": "2002-12-27T23:26:47.739Z",
+      "endDate": "2022-05-01T05:45:01.813Z",
+      "pickupPlaceId": "d834beaa-200f-b65a-e440-7ae969b79cab",
+      "returnPlaceId": "fe804b8a-5d26-4163-42a7-1a1ff8a04659",
+      "pricePerDay": 3750.253200836382,
+      "deviseId": "f1e9cd1d-89fc-f971-1d61-f19e217ce6ea"
+    }
+examples: ./.resources/-api-agency-bookings 1.resources/examples
+order: 5000

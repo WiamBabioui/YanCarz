@@ -1,0 +1,22 @@
+:root { font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; }
+
+.material-symbols-outlined{
+  font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+}
+/* Primary color */
+.bg-primary {
+  background-color: #10a24b;
+}
+
+.text-primary {
+  color: #10a24b;
+}
+
+/* Backgrounds */
+.bg-background-light {
+  background-color: #f6f8f7;
+}
+
+.bg-background-dark {
+  background-color: #112117;
+}

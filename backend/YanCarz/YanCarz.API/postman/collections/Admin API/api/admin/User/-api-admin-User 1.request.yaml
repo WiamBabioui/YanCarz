@@ -1,0 +1,16 @@
+$kind: http-request
+name: /api/admin/User
+url: "{{baseUrl}}/api/admin/User"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "string",
+      "email": "string",
+      "password": "string"
+    }
+examples: ./.resources/-api-admin-User 1.resources/examples
+order: 3000

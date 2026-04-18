@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/admin/User/:id
+url: "{{baseUrl}}/api/admin/User/:id"
+method: DELETE
+pathVariables:
+  id: 9d24f0e5-eaf5-a759-3bee-bfe1d1d49e0a
+examples: ./.resources/-api-admin-User-id 2.resources/examples
+order: 3000

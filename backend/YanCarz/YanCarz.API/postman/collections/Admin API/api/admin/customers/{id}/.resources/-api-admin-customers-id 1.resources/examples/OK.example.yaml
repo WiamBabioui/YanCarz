@@ -1,0 +1,26 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/admin/customers/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+  pathVariables:
+    id: 9d24f0e5-eaf5-a759-3bee-bfe1d1d49e0a
+  body:
+    type: json
+    content: |-
+      {
+        "firstName": "string",
+        "lastName": "string",
+        "phone": "string",
+        "passportNumber": "string",
+        "cityId": "683c4ebf-a21c-65ae-bc82-4650ba06c0b8",
+        "countryId": "cb052a61-e27d-d23b-5176-7896a57f424f"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

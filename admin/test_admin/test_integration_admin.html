@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"><title>Rapport QA Admin - Intégration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#0f172a] text-slate-200 font-sans">
+    <nav class="p-6 border-b border-slate-800 flex justify-between items-center bg-[#0f172a]">
+        <div class="flex items-center gap-3 font-bold text-2xl text-white"><i class="fas fa-shield-alt text-indigo-500"></i> YanCarz Admin</div>
+        <div class="space-x-8 text-xs uppercase tracking-widest font-bold">
+            <a href="test_unitaire_admin.html" class="text-slate-400">Unitaire</a>
+            <a href="test_integration_admin.html" class="text-indigo-400 border-b-2 border-indigo-400 pb-1">Intégration</a>
+            <a href="test_e2e_admin.html" class="text-slate-400">End-to-End</a>
+        </div>
+    </nav>
+
+    <!-- ... (Même Header) ... -->
+    <main class="max-w-4xl mx-auto py-16 px-6">
+        <h1 class="text-4xl font-black text-rose-500 mb-8 uppercase tracking-tighter italic">Audit de Robustesse & APIs</h1>
+
+        <!-- BUG CRITIQUE SYNC -->
+        <div class="bg-rose-500/10 border-2 border-rose-500 p-8 rounded-3xl mb-8 relative">
+            <div class="flex justify-between items-start">
+                <div>
+                    <span class="bg-rose-500 text-white px-2 py-0.5 rounded text-[10px] font-black uppercase">Critique</span>
+                    <h3 class="text-2xl font-bold text-rose-100 mt-2 italic">Désynchronisation Dashboard</h3>
+                    <p class="text-rose-200 mt-3 italic underline">Bug Logique Backend détecté par Selenium :</p>
+                    <p class="text-rose-100 mt-1 font-mono bg-rose-950/40 p-2 rounded">KPI 'Total Agencies': 4 <br> Lignes réelles /agencies: 5</p>
+                </div>
+                <i class="fas fa-sync-alt text-rose-500 text-5xl opacity-40 animate-spin-slow"></i>
+            </div>
+        </div>
+
+        <!-- BUG DEVISE -->
+        <div class="bg-slate-800 p-6 rounded-2xl border-l-4 border-amber-400 flex justify-between items-center">
+            <div>
+                <h3 class="font-bold text-amber-400 uppercase text-xs italic">Anomalie Localisation</h3>
+                <p class="text-slate-200 font-bold italic">Défaut d'affichage MAD</p>
+                <p class="text-slate-500 text-sm">Le script ne détecte pas la chaîne "MAD" sur les cartes de revenus.</p>
+            </div>
+            <i class="fas fa-money-bill-wave text-amber-400"></i>
+        </div>
+    </main>
+<!-- ... -->
+</body>
+</html>

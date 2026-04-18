@@ -1,0 +1,97 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/portal/ResearchRequest?DepartureDate=1954-10-12T15:16:07.\
+    623Z&ReturnDate=1954-10-12T15:16:07.623Z&DepartureTime=16:03:38.016Z&Return\
+    Time=16:03:38.016Z&PickupLocationId=eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d&Dr\
+    opOffLocationId=eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d&AgencyIds=a13c47e7-a8c\
+    5-c895-ef6c-ddf1693a3b9d&ModelIds=a13c47e7-a8c5-c895-ef6c-ddf1693a3b9d&Type\
+    Models=4&FuelType=1&MinPricePerDay=965.4919775072091&MaxPricePerDay=965.491\
+    9775072091&NbrSeats=7046&MinYear=7046&MaxYear=7046&Page=7046&PageSize=7046"
+  method: GET
+  headers:
+    Accept: text/plain
+  queryParams:
+    DepartureDate: 1954-10-12T15:16:07.623Z
+    ReturnDate: 1954-10-12T15:16:07.623Z
+    DepartureTime: 16:03:38.016Z
+    ReturnTime: 16:03:38.016Z
+    PickupLocationId: eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d
+    DropOffLocationId: eed8bf8c-7274-8d3e-b6ee-e1371cb50e6d
+    AgencyIds: a13c47e7-a8c5-c895-ef6c-ddf1693a3b9d
+    ModelIds: a13c47e7-a8c5-c895-ef6c-ddf1693a3b9d
+    TypeModels: "4"
+    FuelType: "1"
+    MinPricePerDay: "965.4919775072091"
+    MaxPricePerDay: "965.4919775072091"
+    NbrSeats: "7046"
+    MinYear: "7046"
+    MaxYear: "7046"
+    Page: "7046"
+    PageSize: "7046"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "items": [
+          {
+            "id": "c517101d-f7e7-e6a8-db6d-e7d3f4cd2a98",
+            "year": 3262,
+            "modelId": "f43a5ff1-53a1-2eb8-dc3e-fb85feea27e7",
+            "modelName": "string",
+            "color": "string",
+            "fuelType": 3,
+            "seats": 9203,
+            "pricePerDay": 5876.043037030341,
+            "agencyId": "3144e326-3f7a-54d2-5736-8bcbab791eac",
+            "agencyName": "string"
+          },
+          {
+            "id": "eaa74d15-cb7f-a89b-1439-bbf62cbcc7a5",
+            "year": 4059,
+            "modelId": "44a4fa80-96e2-ea01-fc2e-d9e52a0478a3",
+            "modelName": "string",
+            "color": "string",
+            "fuelType": 2,
+            "seats": 4293,
+            "pricePerDay": 8406.093577169784,
+            "agencyId": "9583904d-c42d-8542-3a4a-4ad4f2470c44",
+            "agencyName": "string"
+          }
+        ],
+        "page": 256,
+        "pageSize": 5142,
+        "totalCount": 8573,
+        "totalPages": 9278,
+        "cars": [
+          {
+            "id": "0adc35e6-567f-11f9-2d91-bbf2cb5ff663",
+            "year": 3784,
+            "modelId": "72ffd364-06b4-4583-ce82-a10557bcaede",
+            "modelName": "string",
+            "color": "string",
+            "fuelType": 1,
+            "seats": 7252,
+            "pricePerDay": 8572.850614006633,
+            "agencyId": "f62f9cbf-66ee-d526-c3c0-a72f6a14905f",
+            "agencyName": "string"
+          },
+          {
+            "id": "8c99614c-dc87-7b80-7d87-bd8b9668b763",
+            "year": 4746,
+            "modelId": "8c663c48-3b44-b7bb-4e70-36fb1c13c118",
+            "modelName": "string",
+            "color": "string",
+            "fuelType": 4,
+            "seats": 8686,
+            "pricePerDay": 4966.574099916581,
+            "agencyId": "e38c0f05-6d14-e7a1-c031-34db5d18616f",
+            "agencyName": "string"
+          }
+        ]
+      }
+order: 1000

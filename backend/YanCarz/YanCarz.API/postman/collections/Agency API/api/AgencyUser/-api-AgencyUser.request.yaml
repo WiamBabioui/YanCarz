@@ -1,0 +1,6 @@
+$kind: http-request
+name: /api/AgencyUser
+url: "{{baseUrl}}/api/AgencyUser"
+method: GET
+examples: ./.resources/-api-AgencyUser.resources/examples
+order: 2000

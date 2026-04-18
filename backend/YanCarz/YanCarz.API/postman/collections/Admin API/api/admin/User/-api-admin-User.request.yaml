@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/admin/User
+url: "{{baseUrl}}/api/admin/User"
+method: GET
+headers:
+  Accept: text/plain
+examples: ./.resources/-api-admin-User.resources/examples
+order: 2000

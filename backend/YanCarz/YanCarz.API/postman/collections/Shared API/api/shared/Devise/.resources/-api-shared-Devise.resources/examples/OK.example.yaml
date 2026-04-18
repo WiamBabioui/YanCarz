@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/shared/Devise"
+  method: GET
+  headers:
+    Accept: text/plain
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "c2f0d168-711a-a705-2cad-8506ef3beb20",
+          "code": "string",
+          "name": "string"
+        },
+        {
+          "id": "a91e9131-0cc8-5178-b88f-d2382d353bf7",
+          "code": "string",
+          "name": "string"
+        }
+      ]
+order: 1000

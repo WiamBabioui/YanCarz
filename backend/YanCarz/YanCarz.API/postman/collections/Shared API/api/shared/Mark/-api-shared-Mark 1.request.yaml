@@ -1,0 +1,11 @@
+$kind: http-request
+name: /api/shared/Mark
+url: "{{baseUrl}}/api/shared/Mark"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: string
+examples: ./.resources/-api-shared-Mark 1.resources/examples
+order: 3000

@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/agency/bookings/by-agency/:agencyId
+url: "{{baseUrl}}/api/agency/bookings/by-agency/:agencyId"
+method: GET
+pathVariables:
+  agencyId: 60626033-da0a-44c5-6cf5-e81ee0c0baa0
+examples: ./.resources/-api-agency-bookings-by-agency-agencyId.resources/examples
+order: 1000

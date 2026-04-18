@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerte Critique QA - YanCarz Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scan-line {
+            animation: scan 3s linear infinite;
+            background: linear-gradient(to bottom, transparent, #f43f5e, transparent);
+        }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-300 font-sans">
+
+    <!-- BARRE D'ALERTE CRITIQUE -->
+    <div class="bg-rose-600 text-white py-2 px-6 text-center font-black text-xs uppercase tracking-[0.3em] animate-pulse">
+        ⚠️ Alerte Haute Priorité : Échec d'Intégrité des Données (P0) ⚠️
+    </div>
+
+    <nav class="p-6 border-b border-slate-800 bg-[#020617]/80 backdrop-blur-md sticky top-0 z-50 flex justify-between items-center">
+        <div class="flex items-center gap-3 font-bold text-2xl text-white">
+            <i class="fas fa-shield-virus text-rose-500"></i> YanCarz <span class="text-rose-500 italic">Audit Security</span>
+        </div>
+        <div class="text-[10px] font-black border border-rose-500/50 text-rose-500 px-3 py-1 rounded-md">
+            ID TEST : #CRUD-9690
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto py-12 px-6">
+        
+        <!-- HEADER -->
+        <div class="mb-16 text-center">
+            <h1 class="text-6xl font-black text-white mb-4 tracking-tighter uppercase italic">Rupture de <span class="text-rose-500">Persistance</span></h1>
+            <p class="text-slate-500 text-xl max-w-2xl mx-auto italic">L'audit automatisé a révélé que les agences créées en production ne sont pas enregistrées en base de données.</p>
+        </div>
+
+        <!-- DASHBOARD DE CRISE -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                <p class="text-slate-500 text-[10px] font-bold uppercase mb-2">Statut CRUD</p>
+                <p class="text-2xl font-black text-rose-500 italic">ÉCHEC TOTAL</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                <p class="text-slate-500 text-[10px] font-bold uppercase mb-2">Taux de perte</p>
+                <p class="text-2xl font-black text-white">100%</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                <p class="text-slate-500 text-[10px] font-bold uppercase mb-2">Impact Client</p>
+                <p class="text-2xl font-black text-amber-500">CRITIQUE</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                <p class="text-slate-500 text-[10px] font-bold uppercase mb-2">Preuve Visuelle</p>
+                <p class="text-2xl font-black text-indigo-500">GÉNÉRÉE</p>
+            </div>
+        </div>
+
+        <!-- ANALYSE DU CYCLE DE VIE -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-[2rem] p-8 mb-12">
+            <h2 class="text-white font-bold text-xl mb-8 flex items-center gap-3 italic underline decoration-rose-500 underline-offset-8">
+                <i class="fas fa-arrows-spin text-rose-500"></i> Analyse du flux de données
+            </h2>
+            
+            <div class="space-y-6">
+                <!-- CREATE -->
+                <div class="flex items-center gap-6 p-4 bg-[#0f172a] rounded-xl border-l-4 border-emerald-500">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-white font-bold">CREATE : Soumission du formulaire</p>
+                        <p class="text-slate-500 text-xs">Injection des données (Name: QA_AGENCY_PRO_9690) terminée.</p>
+                    </div>
+                    <span class="text-emerald-500 font-black text-[10px]">SUCCESS (UI)</span>
+                </div>
+
+                <!-- READ / SEARCH -->
+                <div class="flex items-center gap-6 p-4 bg-rose-500/5 rounded-xl border-l-4 border-rose-600 relative overflow-hidden">
+                    <div class="w-12 h-12 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-500">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-rose-100 font-bold uppercase italic tracking-tighter text-xl">READ : Vérification de la persistance</p>
+                        <p class="text-rose-300 text-xs italic">Après 5 rafraîchissements, la recherche ne retourne aucun résultat.</p>
+                    </div>
+                    <span class="bg-rose-600 text-white px-3 py-1 rounded text-[10px] font-black italic shadow-lg shadow-rose-600/20 uppercase">CRITICAL FAIL</span>
+                </div>
+
+                <!-- DELETE -->
+                <div class="flex items-center gap-6 p-4 bg-[#0f172a] rounded-xl border-l-4 border-slate-700 opacity-50">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-slate-500 font-bold italic">DELETE : Nettoyage automatique</p>
+                        <p class="text-slate-600 text-xs">Action impossible : donnée source inexistante.</p>
+                    </div>
+                    <span class="text-slate-600 font-black text-[10px]">ABORTED</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREUVE VISUELLE (CAPTURE D'ÉCRAN) -->
+        <section class="mb-12">
+            <div class="flex justify-between items-end mb-6">
+                <h2 class="text-white font-bold text-xl italic underline decoration-indigo-500 underline-offset-8">Capture de preuve Selenium</h2>
+                <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Image capturée à T+30s après l'ajout</p>
+            </div>
+            
+            <div class="relative border-4 border-slate-800 rounded-3xl overflow-hidden shadow-2xl group">
+                <!-- Overlay de scan -->
+                <div class="absolute inset-0 scan-line z-10 pointer-events-none opacity-40"></div>
+                <!-- REMPLACE 'bug_persistance_agencies.png' par ton image si elle est dans le dossier -->
+                <img src="bug_persistance_agencies.png" alt="Evidence" class="w-full grayscale group-hover:grayscale-0 transition-all duration-700">
+                
+                <!-- Annotations sur l'image -->
+                <div class="absolute top-4 left-4 bg-rose-600 text-white px-3 py-1 rounded text-[10px] font-black z-20 shadow-xl">
+                    LOG : RESULT_NOT_FOUND
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYSE TECHNIQUE -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 bg-slate-900 border-t-4 border-rose-500 rounded-2xl shadow-xl">
+                <h3 class="text-white font-black italic uppercase text-xs mb-4 tracking-[0.2em]">Diagnostic Technique</h3>
+                <p class="text-slate-400 text-sm leading-relaxed italic">
+                    L'absence de données après soumission suggère un <span class="text-rose-400 font-bold">Silent Fail Backend</span>. 
+                    Le code HTTP renvoyé par l'API est peut-être 200/201 (OK), mais l'écriture effective en base de données ou l'indexation de recherche échoue. 
+                    <br><br>
+                    <span class="text-indigo-400 font-bold underline">Observation secondaire :</span> La liste contient des entrées de type "string", confirmant un défaut de validation des types de données (Data Sanitization).
+                </p>
+            </div>
+            <div class="p-8 bg-slate-900 border-t-4 border-amber-500 rounded-2xl shadow-xl">
+                <h3 class="text-white font-black italic uppercase text-xs mb-4 tracking-[0.2em]">Recommandation Business</h3>
+                <p class="text-slate-400 text-sm leading-relaxed italic">
+                    <span class="text-amber-500 font-bold uppercase">Urgent :</span> Suspendre les opérations de gestion d'agences en production jusqu'à résolution. 
+                    Il existe un risque majeur de perte de configuration agence et de décalage de facturation.
+                </p>
+            </div>
+        </div>
+
+        <footer class="mt-20 text-center opacity-30">
+            <p class="text-[10px] font-black tracking-[0.5em] uppercase italic">Rapport généré par Wiam QA Suite 2026 - YanCarz Pro</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+$kind: http-request
+name: /api/agency/bookings
+url: "{{baseUrl}}/api/agency/bookings"
+method: GET
+examples: ./.resources/-api-agency-bookings.resources/examples
+order: 4000

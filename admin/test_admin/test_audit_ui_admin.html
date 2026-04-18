@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Audit UI - YanCarz Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#0f172a] text-slate-200 font-sans leading-relaxed">
+
+    <!-- NAVIGATION -->
+    <nav class="p-6 border-b border-slate-800 flex justify-between items-center bg-[#0f172a] sticky top-0 z-50 shadow-xl">
+        <div class="flex items-center gap-3 font-bold text-2xl text-white">
+            <div class="w-10 h-10 bg-gradient-to-tr from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                <i class="fas fa-microchip"></i>
+            </div>
+            YanCarz <span class="text-indigo-400 font-light italic text-lg">Admin Audit</span>
+        </div>
+        <div class="flex gap-4">
+            <span class="bg-rose-500/10 text-rose-500 border border-rose-500/20 px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">
+                Statut : Non-Conforme (1 Erreur)
+            </span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto py-12 px-6">
+        
+        <!-- HEADER RÉSUMÉ -->
+        <header class="mb-12">
+            <h1 class="text-5xl font-black text-white mb-4 tracking-tighter italic">AUDIT DE CONFORMITÉ UI</h1>
+            <p class="text-slate-400 text-lg">Analyse automatisée de l'accessibilité et de la structure des formulaires (Add Agency).</p>
+        </header>
+
+        <!-- STATS CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-slate-800/40 border border-slate-700 p-6 rounded-3xl text-center">
+                <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Taux de succès</p>
+                <p class="text-4xl font-black text-emerald-400 italic">87.5%</p>
+            </div>
+            <div class="bg-slate-800/40 border border-slate-700 p-6 rounded-3xl text-center">
+                <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Éléments testés</p>
+                <p class="text-4xl font-black text-white italic">08</p>
+            </div>
+            <div class="bg-slate-800/40 border border-slate-700 p-6 rounded-3xl text-center">
+                <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Temps d'audit</p>
+                <p class="text-4xl font-black text-indigo-400 italic">42s</p>
+            </div>
+        </div>
+
+        <!-- RÉSULTATS DÉTAILLÉS -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2 italic">
+                <i class="fas fa-list-check text-indigo-500"></i> Points de contrôle
+            </h2>
+
+            <!-- LIGNE : AUTH -->
+            <div class="bg-slate-800/60 border border-slate-700 p-4 rounded-2xl flex justify-between items-center transition hover:bg-slate-800/80">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-lock text-emerald-500"></i>
+                    <div>
+                        <p class="text-white font-bold">Authentification</p>
+                        <p class="text-slate-500 text-xs italic">Vérification de l'accès sécurisé Admin</p>
+                    </div>
+                </div>
+                <span class="text-emerald-500 text-xs font-black uppercase tracking-widest">✅ PASSED</span>
+            </div>
+
+            <!-- LIGNE : FORM ACCESS -->
+            <div class="bg-slate-800/60 border border-slate-700 p-4 rounded-2xl flex justify-between items-center transition hover:bg-slate-800/80">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-file-invoice text-emerald-500"></i>
+                    <div>
+                        <p class="text-white font-bold">Accès au Formulaire 'Add Agency'</p>
+                        <p class="text-slate-500 text-xs italic">Vérification du chargement du modal</p>
+                    </div>
+                </div>
+                <span class="text-emerald-500 text-xs font-black uppercase tracking-widest">✅ PASSED</span>
+            </div>
+
+            <!-- LIGNE : NOM AGENCE -->
+            <div class="bg-slate-800/60 border border-slate-700 p-4 rounded-2xl flex justify-between items-center transition hover:bg-slate-800/80">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-tag text-emerald-500"></i>
+                    <div>
+                        <p class="text-white font-bold italic">Champ : Nom Agence</p>
+                        <p class="text-slate-500 text-xs italic">Attribut 'name=name' détecté</p>
+                    </div>
+                </div>
+                <span class="text-emerald-500 text-xs font-black uppercase tracking-widest">✅ CONFORME</span>
+            </div>
+
+            <!-- LIGNE BUG : OWNER (MISE EN ÉVIDENCE) -->
+            <div class="bg-rose-500/10 border-2 border-rose-500 p-6 rounded-3xl flex justify-between items-center animate-pulse">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-user-slash text-rose-500 text-xl"></i>
+                    <div>
+                        <p class="text-rose-100 font-black text-lg italic uppercase">Champ : Propriétaire (Owner)</p>
+                        <p class="text-rose-300 text-xs font-medium leading-relaxed italic mt-1">
+                            ⚠️ ANOMALIE : Élément invisible pour Selenium. <br>
+                            Cause : Attribut 'name' manquant ou label mal associé (Problème d'accessibilité).
+                        </p>
+                    </div>
+                </div>
+                <span class="bg-rose-500 text-white px-3 py-1 rounded text-[10px] font-black uppercase shadow-lg shadow-rose-500/20">ERROR</span>
+            </div>
+
+            <!-- LIGNE : EMAIL -->
+            <div class="bg-slate-800/60 border border-slate-700 p-4 rounded-2xl flex justify-between items-center transition hover:bg-slate-800/80 opacity-60">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-envelope text-emerald-500"></i>
+                    <div><p class="text-white font-bold">Champ : Email</p></div>
+                </div>
+                <span class="text-emerald-500 text-xs font-black uppercase tracking-widest">✅ CONFORME</span>
+            </div>
+
+            <!-- LIGNE : PHONE -->
+            <div class="bg-slate-800/60 border border-slate-700 p-4 rounded-2xl flex justify-between items-center transition hover:bg-slate-800/80 opacity-60">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-phone text-emerald-500"></i>
+                    <div><p class="text-white font-bold">Champ : Téléphone</p></div>
+                </div>
+                <span class="text-emerald-500 text-xs font-black uppercase tracking-widest">✅ CONFORME</span>
+            </div>
+
+            <!-- LIGNE : CANCEL -->
+            <div class="bg-slate-800/60 border border-slate-700 p-4 rounded-2xl flex justify-between items-center transition hover:bg-slate-800/80">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-xmark text-emerald-500"></i>
+                    <div><p class="text-white font-bold italic">Bouton : Annulation (Cancel)</p></div>
+                </div>
+                <span class="text-emerald-500 text-xs font-black uppercase tracking-widest">✅ OPÉRATIONNEL</span>
+            </div>
+        </section>
+
+        <!-- ANALYSE TECHNIQUE -->
+        <section class="mt-16 p-8 bg-slate-900 border-l-4 border-indigo-500 rounded-2xl shadow-2xl">
+            <h3 class="text-white font-black text-xl mb-4 italic uppercase tracking-tighter">Analyse Technique QA</h3>
+            <p class="text-slate-400 text-sm leading-relaxed italic">
+                L'audit démontre une instabilité sur le champ <span class="text-rose-400 font-bold">Owner</span>. 
+                Le script Selenium n'est pas parvenu à localiser l'élément via les sélecteurs standards 
+                (Name, Placeholder, Label XPath). <br><br>
+                <span class="text-indigo-400 font-bold underline">Recommandation :</span> Ajouter un ID unique au champ Owner et s'assurer que le label HTML utilise l'attribut 'for' pointant vers cet ID pour garantir la conformité WCAG (Accessibilité).
+            </p>
+        </section>
+
+        <footer class="mt-12 text-center">
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] font-black italic">Généré par Selenium QA Suite - YanCarz Pro</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

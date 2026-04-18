@@ -1,0 +1,51 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/agency/AgencyCar"
+  method: GET
+  headers:
+    Accept: text/plain
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "c666d5d2-09c4-e502-cf60-d7ac548385a9",
+          "year": 1682,
+          "modelId": "2f2b97f4-760b-7592-69e1-a551710d9fc5",
+          "modelName": "string",
+          "markName": "string",
+          "plateNumber": "string",
+          "color": "string",
+          "fuelType": 1,
+          "seats": 9321,
+          "pricePerDay": 6922.6723249724855,
+          "agencyId": "026dd620-777e-a8a4-7005-77ad8d0d48cc",
+          "agencyName": "string",
+          "status": 1,
+          "mileage": 2946,
+          "category": 4
+        },
+        {
+          "id": "0b08ba25-43c6-32aa-ff6e-49254c399c4c",
+          "year": 6198,
+          "modelId": "c6a97d33-1658-eaf6-8817-4c40c5f03cf2",
+          "modelName": "string",
+          "markName": "string",
+          "plateNumber": "string",
+          "color": "string",
+          "fuelType": 4,
+          "seats": 8717,
+          "pricePerDay": 8360.829949109762,
+          "agencyId": "d3abcbdb-0112-4972-76f5-0a6b213e6b49",
+          "agencyName": "string",
+          "status": 3,
+          "mileage": 7488,
+          "category": 5
+        }
+      ]
+order: 1000
